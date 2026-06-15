@@ -1,0 +1,50 @@
+============================================================
+s539 — Tail Risk Regime
+============================================================
+[s539] Downloading …
+[s539] Cached
+[s539] Composite: mean=1.75, std=1.57
+[s539] Dist: Normal≥1=68.9%, Elevated=0.0%, Distressed≤-1=8.5%
+[harness] Loaded 3 tickers from cache (08898996a3c4.csv)
+[harness] Fold 1/12: train 2010-01-04-2015-01-05 | test 2015-02-05-2016-02-04 | net ret -0.63% ann'd
+[harness] Fold 2/12: train 2010-01-04-2016-01-05 | test 2016-02-05-2017-02-03 | net ret 0.29% ann'd
+[harness] Fold 3/12: train 2010-01-04-2017-01-04 | test 2017-02-06-2018-02-05 | net ret 0.69% ann'd
+[harness] Fold 4/12: train 2010-01-04-2018-01-04 | test 2018-02-06-2019-02-06 | net ret 0.88% ann'd
+[harness] Fold 5/12: train 2010-01-04-2019-01-07 | test 2019-02-07-2020-02-06 | net ret 1.41% ann'd
+[harness] Fold 6/12: train 2010-01-04-2020-01-07 | test 2020-02-07-2021-02-05 | net ret 3.74% ann'd
+[harness] Fold 7/12: train 2010-01-04-2021-01-06 | test 2021-02-08-2022-02-04 | net ret 2.10% ann'd
+[harness] Fold 8/12: train 2010-01-04-2022-01-05 | test 2022-02-07-2023-02-07 | net ret -0.99% ann'd
+[harness] Fold 9/12: train 2010-01-04-2023-01-06 | test 2023-02-08-2024-02-08 | net ret 3.21% ann'd
+[harness] Fold 10/12: train 2010-01-04-2024-01-09 | test 2024-02-09-2025-02-11 | net ret 1.55% ann'd
+[harness] Fold 11/12: train 2010-01-04-2025-01-10 | test 2025-02-12-2026-02-12 | net ret 3.75% ann'd
+[harness] Fold 12/12: train 2010-01-04-2026-01-13 | test 2026-02-13-2026-06-12 | net ret 3.80% ann'd
+
+============================================================
+s539 — Tail Risk Regime
+============================================================
+SCORE                0.7042
+sharpe_net           0.7042
+sharpe_gross         0.8999
+deflated_sharpe      0.7042
+sortino              0.8247
+max_dd_pct           -4.0
+ann_turnover         3.3
+n_trades             187
+win_rate             0.5035
+beta_spy             0.0
+oos_years            11.3
+
+---
+SCORE                0.7042
+sharpe_net           0.7042
+sharpe_gross         0.8999
+deflated_sharpe      0.7042
+sortino              0.8247
+max_dd_pct           -4.0
+ann_turnover         3.3
+n_trades             187
+win_rate             0.5035
+beta_spy             0.0
+oos_years            11.3
+
+LEDGER_ROW	s539	tail-risk-regime	spy-tlt-gld	0.7042	0.7042	-4.0	3.3	0	keep	TAILREG: SKEW/VIX TS/credit tail risk signals, 3-tier SPY+TLT+GLD

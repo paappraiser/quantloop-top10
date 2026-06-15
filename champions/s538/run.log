@@ -1,0 +1,50 @@
+============================================================
+s538 — Unified Regime Ensemble
+============================================================
+[s538] Loading from cache …
+[s538] Ensemble raw: mean=0.020, std=0.637
+[s538] Ensemble (with delta): mean=0.019, std=1.123
+[s538] Dist: RiskOn≥0.5=33.7%, Neutral=69.3%, Defensive=91.1%, Crisis≤-1.5=8.9%
+[harness] Loaded 3 tickers from cache (08898996a3c4.csv)
+[harness] Fold 1/12: train 2010-01-04-2015-01-05 | test 2015-02-05-2016-02-04 | net ret 0.20% ann'd
+[harness] Fold 2/12: train 2010-01-04-2016-01-05 | test 2016-02-05-2017-02-03 | net ret 0.34% ann'd
+[harness] Fold 3/12: train 2010-01-04-2017-01-04 | test 2017-02-06-2018-02-05 | net ret 1.49% ann'd
+[harness] Fold 4/12: train 2010-01-04-2018-01-04 | test 2018-02-06-2019-02-06 | net ret 0.92% ann'd
+[harness] Fold 5/12: train 2010-01-04-2019-01-07 | test 2019-02-07-2020-02-06 | net ret 2.55% ann'd
+[harness] Fold 6/12: train 2010-01-04-2020-01-07 | test 2020-02-07-2021-02-05 | net ret 3.72% ann'd
+[harness] Fold 7/12: train 2010-01-04-2021-01-06 | test 2021-02-08-2022-02-04 | net ret 0.89% ann'd
+[harness] Fold 8/12: train 2010-01-04-2022-01-05 | test 2022-02-07-2023-02-07 | net ret -4.24% ann'd
+[harness] Fold 9/12: train 2010-01-04-2023-01-06 | test 2023-02-08-2024-02-08 | net ret 3.89% ann'd
+[harness] Fold 10/12: train 2010-01-04-2024-01-09 | test 2024-02-09-2025-02-11 | net ret 3.38% ann'd
+[harness] Fold 11/12: train 2010-01-04-2025-01-10 | test 2025-02-12-2026-02-12 | net ret 2.24% ann'd
+[harness] Fold 12/12: train 2010-01-04-2026-01-13 | test 2026-02-13-2026-06-12 | net ret 5.19% ann'd
+
+============================================================
+s538 — Unified Regime Ensemble
+============================================================
+SCORE                0.7225
+sharpe_net           0.7225
+sharpe_gross         0.8805
+deflated_sharpe      0.7225
+sortino              0.8569
+max_dd_pct           -5.9
+ann_turnover         2.1
+n_trades             239
+win_rate             0.4996
+beta_spy             0.0
+oos_years            11.3
+
+---
+SCORE                0.7225
+sharpe_net           0.7225
+sharpe_gross         0.8805
+deflated_sharpe      0.7225
+sortino              0.8569
+max_dd_pct           -5.9
+ann_turnover         2.1
+n_trades             239
+win_rate             0.4996
+beta_spy             0.0
+oos_years            11.3
+
+LEDGER_ROW	s538	unified-ensemble	spy-tlt-gld	0.7225	0.7225	-5.9	2.1	0	keep	UNIFIED: meta-ensemble 6 themes (risk/growth/infl/YC/dollar/vol)+daily delta, 3-tier SPY+TLT+GLD

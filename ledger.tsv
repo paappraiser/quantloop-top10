@@ -21,14 +21,22 @@ s019	multi-factor	sp100	0.6232	0.6232	-13.9	9.9	2	keep	combined 5d reversal + 12
 s020	mean-reversion	sp100	0.0	0.0	0.0	0.0	1	discard	2-day reversal S&P 100, daily rebalance, top5/bottom5
 s101	mean-reversion	sp100	0.353	0.353	-19.2	11.2	2	keep	weekly reversal S&P 100, 5/5 equal-weight, lookback=5d (CORRECTED HARNESS - TRUE CHAMPION)
 s523	regime-detection	spy-tlt	0.0	0.5911	-3.6	0.3	2	discard	MRD baseline: 5-signal composite, gap=4d weekly rebalance, failed n_trades gate (31)
-s524	regime-detection	spy-tlt	0.8727	0.8727	-2.9	1.7	2	keep	MRDv2 champion: 5-signal composite, benign≥2/stressed<-1, gap=2d rebalance, SR=0.873, DD=-2.9%
+s524	regime-detection	spy-tlt	0.8727	0.8727	-2.9	1.7	2	keep	MRDv2 champion: 5-signal composite, benign>=2/stressed<-1, gap=2d rebalance, SR=0.873, DD=-2.9%
 s525	regime-detection	spy-tlt	0.7427	0.7427	-4.6	2.1	1	keep	MRDv3 continuous sizing: spy_w=(composite+5)/10, daily rebalance, SR=0.743, DD=-4.6%
-s526	regime-detection	spy-tlt	0.6785	0.6785	-3.9	1.7	3	keep	MRDv4: champion s524 + 200d MA trend filter. MA filter REDUCES Sharpe (0.873→0.678). Regime signals already capture trend.
+s526	regime-detection	spy-tlt	0.6785	0.6785	-3.9	1.7	3	keep	MRDv4: champion s524 + 200d MA trend filter. MA filter REDUCES Sharpe (0.873->0.678). Regime signals already capture trend.
 s527	regime-detection	spy-tlt	0.8727	0.8727	-2.9	1.7	3	keep	MRDv5: 5-signal composite with 252d rolling accuracy weighting, gap=2d rebalance. SR=0.873, identical to s524 (all signals ~0.50 accuracy)
-s528	regime-sector-rot	spy-tlt-sectors	0.8623	0.8623	-5.3	3.5	2	keep	Regime-Based Sector Rotation (fixed): XLE excluded, gap=2d rebalance. Benign→XLK+XLF, Stressed→XLU, Neutral→top2 of 3. SR=0.862, DD=-5.3%, 183 trades.
+s528	regime-sector-rot	spy-tlt-sectors	0.8623	0.8623	-5.3	3.5	2	keep	Regime-Based Sector Rotation (fixed): XLE excluded, gap=2d rebalance. Benign->XLK+XLF, Stressed->XLU, Neutral->top2 of 3. SR=0.862, DD=-5.3%, 183 trades.
 s529	regime-detection-stress	spy-tlt	0.6697	0.6697	-4.7	1.1	3	keep	MRD-V2 Stress Score: rolling z-scores + sigmoid + persistence + trend filter. Beat HMM (0.000, 80 trades). Winning arch. V2 doesn't beat V1 (s524=0.873).
 s530	regime-detection-stress	spy-tlt	0.6856	0.6856	-4.5	1.2	1	keep	Persistence sweep on s529 Stress Score: persistence=1-10d. Best p=1d (SR=0.686), worst p=10d (0.656). Signal is smooth enough without extra smoothing.
 s531	inflation-regime	spy-tlt	0.4499	0.4499	-4.5	2.4	0	keep	INFLREGv5: 5-signal (4 binary 20d + daily BE), discrete 3-tier SPY/TLT/neutral, gap=2d
 s532	risk-appetite-regime	spy-tlt	0.9614	0.9614	-3.6	1.4	0	keep	RISKREG: 4-signal (credit, VIX, SPY/TLT corr, gold) dynamic, 3-tier RO/Neutral/Roff, gap=2d. NEW CHAMPION beats s524(0.873) by 10%
 s533	yield-curve-regime	spy-tlt	0.6269	0.6269	-3.1	2.9	0	keep	YCREGv3: 3-signal (10d slope/level/rate) + daily Δcurve, discrete 3-tier, DD=-3.1% (cleanest)
-s534	macro-quadrant-regime	spy-tlt-gld	0.8913	0.8913	-5.1	1.6	0	keep	MACRO4: 2×2 growth×inflation quadrant (Goldilocks/Overheat/Recession/Stagflation), SPY+TLT+GLD, gap=2d
+s534	macro-quadrant-regime	spy-tlt-gld	0.8913	0.8913	-5.1	1.6	0	keep	MACRO4: 2x2 growth/inflation quadrant (Goldilocks/Overheat/Recession/Stagflation), SPY+TLT+GLD, gap=2d
+s535	dollar-regime	spy-tlt-gld-eem	0.6965	0.6965	-8.7	3.6	0	keep	USDCYCLE: USD cycle 4-signal(20d)+daily, 4-tier alloc SPY+TLT+GLD+EEM, DD=-8.7%
+s536	correlation-regime	spy-tlt-gld	0.3206	0.3206	-3.8	6.6	0	keep	CORREG: PCA on 8-asset 60d rolling corr, 4 quadrants SPY+TLT+GLD, gross SR=0.692%
+s537	vol-ensemble	spy-tlt	0.4435	0.4435	-5.8	1.6	0	keep	VOLREG: 5 vol signals (VIX TS/RV/bond vol/disp/vov), disc 3-tier, DD=-5.8%
+s538	unified-ensemble	spy-tlt-gld	0.7225	0.7225	-5.9	2.1	0	keep	UNIFIED: meta-ensemble 6 themes (risk/growth/infl/YC/dollar/vol)+daily delta, 3-tier SPY+TLT+GLD
+s539	tail-risk-regime	spy-tlt-gld	0.7042	0.7042	-4.0	3.3	0	keep	TAILREG: SKEW/VIX TS/credit tail risk signals, 3-tier SPY+TLT+GLD, gross SR=0.900
+s540	factor-rotation	mtum-qual-usmv-vlue	0.6838	0.6838	-7.5	4.2	0	keep	FACTOR: 3 macro signals (vol/growth/yield)+daily delta, MTUM/QUAL/USMV/VLUE top2, DD=-7.5%
+s541	multi-asset-momentum	8-etf-global	0.2831	0.2831	-11.7	4.6	2	keep	XS-MOM: 252d lookback, top/bottom 3 of 8 multi-asset ETFs (best of 6 sweep)
+s543	trend-following	8-etf-global	0.3249	0.3249	-14.9	3.9	1	keep	TREND: mom252, 8 multi-asset ETFs, equal-weight, weekly rebalance (best of 3 sweep)

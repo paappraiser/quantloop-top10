@@ -1,0 +1,47 @@
+============================================================
+s540 — Factor Rotation Regime
+============================================================
+[s540] Loading from cache …
+[s540] Composite: mean=0.59, std=2.88
+[s540] Dist: RiskOn≥1=63.6%, Mixed=63.6%, RiskOff≤-1=36.4%
+[harness] Loaded 4 tickers from cache (bcb39ddfa581.csv)
+[harness] Fold 1/10: train 2011-10-20-2016-10-21 | test 2016-11-22-2017-11-21 | net ret 4.37% ann'd
+[harness] Fold 2/10: train 2011-10-20-2017-10-23 | test 2017-11-22-2018-11-21 | net ret 0.38% ann'd
+[harness] Fold 3/10: train 2011-10-20-2018-10-23 | test 2018-11-23-2019-11-22 | net ret 5.21% ann'd
+[harness] Fold 4/10: train 2011-10-20-2019-10-24 | test 2019-11-25-2020-11-23 | net ret 1.74% ann'd
+[harness] Fold 5/10: train 2011-10-20-2020-10-23 | test 2020-11-24-2021-11-23 | net ret 2.96% ann'd
+[harness] Fold 6/10: train 2011-10-20-2021-10-25 | test 2021-11-24-2022-11-23 | net ret -2.99% ann'd
+[harness] Fold 7/10: train 2011-10-20-2022-10-25 | test 2022-11-25-2023-11-27 | net ret 0.96% ann'd
+[harness] Fold 8/10: train 2011-10-20-2023-10-26 | test 2023-11-28-2024-11-26 | net ret 5.35% ann'd
+[harness] Fold 9/10: train 2011-10-20-2024-10-28 | test 2024-11-27-2025-12-01 | net ret 1.46% ann'd
+[harness] Fold 10/10: train 2011-10-20-2025-10-30 | test 2025-12-02-2026-06-12 | net ret 8.03% ann'd
+
+============================================================
+s540 — Factor Rotation Regime
+============================================================
+SCORE                0.6838
+sharpe_net           0.6838
+sharpe_gross         0.8385
+deflated_sharpe      0.6838
+sortino              0.7899
+max_dd_pct           -7.5
+ann_turnover         4.2
+n_trades             102
+win_rate             0.4962
+beta_spy             0.0
+oos_years            9.5
+
+---
+SCORE                0.6838
+sharpe_net           0.6838
+sharpe_gross         0.8385
+deflated_sharpe      0.6838
+sortino              0.7899
+max_dd_pct           -7.5
+ann_turnover         4.2
+n_trades             102
+win_rate             0.4962
+beta_spy             0.0
+oos_years            9.5
+
+LEDGER_ROW	s540	factor-rotation	mtum-qual-usmv-vlue	0.6838	0.6838	-7.5	4.2	0	keep	FACTOR: 3 macro signals (vol/growth/yield) rotate MTUM/QUAL/USMV/VLUE top2

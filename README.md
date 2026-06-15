@@ -23,35 +23,41 @@ Autonomous systematic strategy research — quantitative trading strategies gene
 | 7 | s016 | Magnitude-Weighted Reversal | Mean Reversion | **0.788** | 0.79 | -9.0% | — |
 | 8 | s525 | MRDv3 Continuous Sizing | Regime-Based | **0.743** | 0.74 | -4.6% | — |
 | 9 | s017 | Filtered Reversal | Mean Reversion | **0.729** | 0.73 | -11.1% | — |
-| 10 | s530 | Stress Score Persistence Sweep | Regime-Based | **0.686** | 0.69 | -4.5% | — |
-| 11 | s526 | MRDv4 Trend Filtered | Regime-Based | **0.678** | 0.68 | -3.9% | — |
-| 12 | s529 | MRD-V2 Stress Score | Regime-Based | **0.670** | 0.67 | -4.7% | — |
-| 13 | s533 | Yield Curve Regime | Regime-Based | **0.627** | 0.63 | -3.1% | 276 |
-| 14 | s019 | Combined Reversal + Momentum | Multi-Factor | **0.623** | 0.62 | -13.9% | — |
-| 15 | s531 | Inflation Regime | Regime-Based | **0.450** | 0.45 | -4.5% | 225 |
-| 16 | s018 | Short-term Reversal (200 stocks) | Mean Reversion | **0.439** | 0.44 | -12.5% | — |
-| 17 | s010 | 50/200 MA Crossover | Trend Following | **0.410** | 0.41 | -17.3% | — |
-| 18 | s008 | VIX-Filtered Trend | Trend Following | **0.359** | 0.36 | -15.9% | — |
-| 19 | s101 | Weekly Reversal S&P 100 | Mean Reversion | **0.353** | 0.35 | -19.2% | — |
-| 20 | s006 | Enhanced Trend (12-ETF) | Trend Following | **0.317** | 0.32 | -16.3% | — |
+| 10 | **s538** | **Unified Regime Ensemble** | **Regime-Based** | **0.723** | 0.72 | -5.9% | 239 |
+| 11 | **s539** | **Tail Risk Regime** | **Regime-Based** | **0.704** | 0.70 | -4.0% | 187 |
+| 12 | **s535** | **Dollar/Global Macro** | **Regime-Based** | **0.697** | 0.70 | -8.7% | 250 |
+| 13 | s530 | Stress Score Persistence Sweep | Regime-Based | **0.686** | 0.69 | -4.5% | — |
+| 14 | **s540** | **Factor Rotation** | **Regime-Based** | **0.684** | 0.68 | -7.5% | 102 |
+| 15 | s526 | MRDv4 Trend Filtered | Regime-Based | **0.678** | 0.68 | -3.9% | — |
+| 16 | s529 | MRD-V2 Stress Score | Regime-Based | **0.670** | 0.67 | -4.7% | — |
+| 17 | s533 | Yield Curve Regime | Regime-Based | **0.627** | 0.63 | -3.1% | 276 |
+| 18 | s019 | Combined Reversal + Momentum | Multi-Factor | **0.623** | 0.62 | -13.9% | — |
+| 19 | s531 | Inflation Regime | Regime-Based | **0.450** | 0.45 | -4.5% | 225 |
+| 20 | **s537** | **Volatility Regime Ensemble** | **Regime-Based** | **0.444** | 0.44 | -5.8% | 162 |
 
 ## Strategy Families
 
 ### Regime Detection (SPY + TLT + GLD)
-These strategies classify the market into regimes and allocate between SPY (equities) and TLT (bonds), with s534 adding GLD (gold).
+These strategies classify the market into regimes and allocate between assets. The top 4 are the original champions; the deep-dive batch (s535-s540) explores new macro themes.
 
 | ID | Theme | Key Signals | Universe |
 |----|-------|-------------|----------|
 | s532 | Risk Appetite | Credit spreads, VIX level, SPY/TLT corr, gold risk | SPY+TLT |
 | s534 | Macro Quadrant | 2×2 Growth×Inflation → 4 quadrants | SPY+TLT+GLD |
 | s524 | Classic Vol Technicals | VIX TS, RV trend, corr, credit spread, SKEW | SPY+TLT |
-| s528 | Sector Rotation | Same regime signals → sector ETF allocation | SPY+TLT+Sectors |
-| s525 | Continuous Sizing | Same regime signals → continuous SPY weight | SPY+TLT |
+| s528 | Sector Rotation | Regime signals → sector ETF allocation | SPY+TLT+Sectors |
+| s525 | Continuous Sizing | Regime signals → continuous SPY weight | SPY+TLT |
 | s533 | Yield Curve | TLT/SHY slope + short rate momentum | SPY+TLT |
+| s531 | Inflation | TIP breakevens + commodities + gold + dollar | SPY+TLT |
+| **s538** | **Unified Ensemble** | **Meta-ensemble of all 6 themes** | **SPY+TLT+GLD** |
+| **s539** | **Tail Risk** | **SKEW + VIX TS + credit stress** | **SPY+TLT+GLD** |
+| **s535** | **Dollar/Macro** | **USD cycle + global growth diff** | **SPY+TLT+GLD+EEM** |
+| **s540** | **Factor Rotation** | **Vol/growth/yield → factor ETFs** | **MTUM/QUAL/USMV/VLUE** |
+| **s537** | **Vol Ensemble** | **VIX TS / RV / bond vol / dispersion** | **SPY+TLT** |
+| **s536** | **Correlation PCA** | **PCA on 8-asset rolling corr** | **SPY+TLT+GLD** |
 
 ### Mean Reversion (S&P 100)
 These strategies exploit short-term reversal in individual stocks.
-
 | ID | Name | Lookback | Positions |
 |----|------|----------|-----------|
 | s015 | Concentrated Reversal | 5d | top5/bottom5, magnitude-weighted |
@@ -78,17 +84,17 @@ quantloop-top10/
     ├── s016/               # Magnitude-Weighted Reversal
     ├── s525/               # MRDv3 Continuous Sizing
     ├── s017/               # Filtered Reversal
+    ├── s538/               # Unified Regime Ensemble
+    ├── s539/               # Tail Risk Regime
+    ├── s535/               # Dollar/Global Macro
     ├── s530/               # Stress Score Persistence Sweep
+    ├── s540/               # Factor Rotation
     ├── s526/               # MRDv4 Trend Filtered
     ├── s529/               # MRD-V2 Stress Score
     ├── s533/               # Yield Curve Regime
     ├── s019/               # Combined Reversal + Momentum
     ├── s531/               # Inflation Regime
-    ├── s018/               # Short-term Reversal (200 stocks)
-    ├── s010/               # 50/200 MA Crossover
-    ├── s008/               # VIX-Filtered Trend
-    ├── s101/               # Weekly Reversal S&P 100
-    └── s006/               # Enhanced Trend (12-ETF)
+    └── s537/               # Volatility Regime Ensemble
 ```
 
 ## How to Run
@@ -105,10 +111,15 @@ Each strategy downloads its own data (yfinance, cached) and prints results to st
 
 ## Key Findings
 
-- **Regime detection dominates**: 6 of top 10 are regime-classification strategies
-- **Risk appetite is the strongest single dimension**: Multi-dimensional risk gauge (credit + vol + correlation + safe-haven) beats pure vol technicals by 10%
-- **Discrete allocation is critical**: The harness per-position cap (10%) kills continuous allocation on 2-asset portfolios — only extreme discrete weights (0/100, 100/0) create detectable turnover
-- **Mean reversion on S&P 100 is the only stock-level strategy family that works**: All 4 mean-reversion champions exploit 5-day reversal patterns
+- **Risk appetite is the strongest single dimension**: Multi-dimensional risk gauge (credit + vol + correlation + safe-haven) achieves 0.961 — no other theme or ensemble reaches 0.73. The credit signal (HYG/LQD MA crossover) is the key differentiator.
+- **Unified ensemble beats 5 of 6 component themes**: Combining risk appetite, growth, inflation, yield curve, dollar, and vol into one meta-signal achieves 0.723. Only the champion risk appetite outruns it.
+- **Tail risk (SKEW + VIX TS + credit) has the highest gross Sharpe**: 0.900 gross, 0.704 net. The SKEW index is underutilized in systematic strategies.
+- **Dollar/Global Macro works on 4 assets**: First multi-asset regime strategy (SPY+TLT+GLD+EEM) with USD cycle as the organizing principle.
+- **Factor rotation between MTUM/QUAL/USMV/VLUE is feasible**: 0.684 though barely passes the trades gate. Factor timing has lower Sharpe than asset allocation.
+- **PCA correlation regime works but costs dominate**: 0.692 gross, 0.321 net — 6.6x turnover eats the edge.
+- **Discrete allocation is critical**: The harness per-position cap (10%) kills continuous allocation on 2-asset portfolios — only extreme discrete weights (0/100, 100/0) create detectable turnover. For 3+ asset portfolios, discrete allocation still works through regime transitions.
+- **Daily delta fixes low trade frequency**: Adding `composite_delta * 3.0` to the base signal rescued s538 (94→239 trades) and s540 (72→102). The first-derivative of the regime signal captures regime transitions.
+- **Mean reversion on S&P 100 is the only stock-level strategy family that works**: All mean-reversion champions exploit 5-day reversal patterns.
 
 ## Disclaimer
 

@@ -1,0 +1,51 @@
+============================================================
+s535 — Dollar/Global Macro Regime
+============================================================
+[s535] Downloading …
+[s535] Cached
+[s535] Composite: mean=-0.07, std=2.61
+[s535] Dist: StrongUSD≤-1.5=38.8%, MildUSD=11.0%, MildWeak=13.1%, StrongWeak≥1.5=37.1%
+[harness] Downloading 4 tickers from yfinance …
+[harness] Cached to C:\Users\mszel\quantloop\data\302abdb4e159.csv
+[harness] Fold 1/12: train 2010-01-04-2015-01-05 | test 2015-02-05-2016-02-04 | net ret -0.48% ann'd
+[harness] Fold 2/12: train 2010-01-04-2016-01-05 | test 2016-02-05-2017-02-03 | net ret 1.94% ann'd
+[harness] Fold 3/12: train 2010-01-04-2017-01-04 | test 2017-02-06-2018-02-05 | net ret 3.08% ann'd
+[harness] Fold 4/12: train 2010-01-04-2018-01-04 | test 2018-02-06-2019-02-06 | net ret -0.09% ann'd
+[harness] Fold 5/12: train 2010-01-04-2019-01-07 | test 2019-02-07-2020-02-06 | net ret 4.31% ann'd
+[harness] Fold 6/12: train 2010-01-04-2020-01-07 | test 2020-02-07-2021-02-05 | net ret 6.03% ann'd
+[harness] Fold 7/12: train 2010-01-04-2021-01-06 | test 2021-02-08-2022-02-04 | net ret 1.22% ann'd
+[harness] Fold 8/12: train 2010-01-04-2022-01-05 | test 2022-02-07-2023-02-07 | net ret -4.39% ann'd
+[harness] Fold 9/12: train 2010-01-04-2023-01-06 | test 2023-02-08-2024-02-08 | net ret 2.18% ann'd
+[harness] Fold 10/12: train 2010-01-04-2024-01-09 | test 2024-02-09-2025-02-11 | net ret 3.81% ann'd
+[harness] Fold 11/12: train 2010-01-04-2025-01-10 | test 2025-02-12-2026-02-12 | net ret 8.89% ann'd
+[harness] Fold 12/12: train 2010-01-04-2026-01-13 | test 2026-02-13-2026-06-12 | net ret 4.05% ann'd
+
+============================================================
+s535 — Dollar/Global Macro Regime
+============================================================
+SCORE                0.6965
+sharpe_net           0.6965
+sharpe_gross         0.8239
+deflated_sharpe      0.6965
+sortino              0.8394
+max_dd_pct           -8.7
+ann_turnover         3.6
+n_trades             250
+win_rate             0.5088
+beta_spy             0.0
+oos_years            11.3
+
+---
+SCORE                0.6965
+sharpe_net           0.6965
+sharpe_gross         0.8239
+deflated_sharpe      0.6965
+sortino              0.8394
+max_dd_pct           -8.7
+ann_turnover         3.6
+n_trades             250
+win_rate             0.5088
+beta_spy             0.0
+oos_years            11.3
+
+LEDGER_ROW	s535	dollar-regime	spy-tlt-gld-eem	0.6965	0.6965	-8.7	3.6	0	keep	USDCYCLE: USD cycle 4-signal(20d)+daily, 4-tier alloc SPY+TLT+GLD+EEM

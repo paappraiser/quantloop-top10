@@ -1,0 +1,62 @@
+============================================================
+s536 — Cross-Asset Correlation Regime (PCA)
+============================================================
+[s536] Downloading PCA data …
+  SPY: 5395 days
+  TLT: 5395 days
+  GLD: 5395 days
+  DBC: 5120 days
+  EEM: 5395 days
+  HYG: 4825 days
+  SHY: 5395 days
+  UUP: 4853 days
+[s536] Cached
+[s536] PC1: mean=-0.000348, var ratio ≈ 0.66
+       Q1: Risk-On+Growth: 22.2%
+       Q2: Risk-On+Infl: 20.8%
+       Q3: Risk-Off+Def: 22.5%
+       Q4: Risk-Off+Stress: 34.5%
+[harness] Loaded 3 tickers from cache (08898996a3c4.csv)
+[s536] Prices: 4136 days, tickers: ['GLD', 'SPY', 'TLT']
+[harness] Fold 1/12: train 2010-01-04-2015-01-05 | test 2015-02-05-2016-02-04 | net ret 0.66% ann'd
+[harness] Fold 2/12: train 2010-01-04-2016-01-05 | test 2016-02-05-2017-02-03 | net ret 1.41% ann'd
+[harness] Fold 3/12: train 2010-01-04-2017-01-04 | test 2017-02-06-2018-02-05 | net ret 0.10% ann'd
+[harness] Fold 4/12: train 2010-01-04-2018-01-04 | test 2018-02-06-2019-02-06 | net ret -1.82% ann'd
+[harness] Fold 5/12: train 2010-01-04-2019-01-07 | test 2019-02-07-2020-02-06 | net ret 1.09% ann'd
+[harness] Fold 6/12: train 2010-01-04-2020-01-07 | test 2020-02-07-2021-02-05 | net ret -2.12% ann'd
+[harness] Fold 7/12: train 2010-01-04-2021-01-06 | test 2021-02-08-2022-02-04 | net ret 2.07% ann'd
+[harness] Fold 8/12: train 2010-01-04-2022-01-05 | test 2022-02-07-2023-02-07 | net ret -0.69% ann'd
+[harness] Fold 9/12: train 2010-01-04-2023-01-06 | test 2023-02-08-2024-02-08 | net ret 1.40% ann'd
+[harness] Fold 10/12: train 2010-01-04-2024-01-09 | test 2024-02-09-2025-02-11 | net ret 0.97% ann'd
+[harness] Fold 11/12: train 2010-01-04-2025-01-10 | test 2025-02-12-2026-02-12 | net ret 3.13% ann'd
+[harness] Fold 12/12: train 2010-01-04-2026-01-13 | test 2026-02-13-2026-06-12 | net ret 5.94% ann'd
+
+============================================================
+s536 — Cross-Asset Correlation Regime
+============================================================
+SCORE                0.3206
+sharpe_net           0.3206
+sharpe_gross         0.6919
+deflated_sharpe      0.3206
+sortino              0.4036
+max_dd_pct           -3.8
+ann_turnover         6.6
+n_trades             399
+win_rate             0.4894
+beta_spy             0.0
+oos_years            11.3
+
+---
+SCORE                0.3206
+sharpe_net           0.3206
+sharpe_gross         0.6919
+deflated_sharpe      0.3206
+sortino              0.4036
+max_dd_pct           -3.8
+ann_turnover         6.6
+n_trades             399
+win_rate             0.4894
+beta_spy             0.0
+oos_years            11.3
+
+LEDGER_ROW	s536	correlation-regime	spy-tlt-gld	0.3206	0.3206	-3.8	6.6	0	keep	CORREG: PCA on 8-asset 60d rolling corr matrix, 4 quadrants SPY+TLT+GLD

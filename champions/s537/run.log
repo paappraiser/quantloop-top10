@@ -1,0 +1,50 @@
+============================================================
+s537 — Volatility Regime Ensemble
+============================================================
+[s537] Downloading …
+[s537] Cached
+[s537] Composite: mean=1.25, std=2.16
+[s537] Dist: LowVol≥1=59.6%, Med=24.2%, HiVol≤-1=16.2%
+[harness] Loaded 2 tickers from cache (dab4f62e9fe5.csv)
+[harness] Fold 1/12: train 2010-01-04-2015-01-05 | test 2015-02-05-2016-02-04 | net ret -0.41% ann'd
+[harness] Fold 2/12: train 2010-01-04-2016-01-05 | test 2016-02-05-2017-02-03 | net ret 1.00% ann'd
+[harness] Fold 3/12: train 2010-01-04-2017-01-04 | test 2017-02-06-2018-02-05 | net ret 0.55% ann'd
+[harness] Fold 4/12: train 2010-01-04-2018-01-04 | test 2018-02-06-2019-02-06 | net ret 0.13% ann'd
+[harness] Fold 5/12: train 2010-01-04-2019-01-07 | test 2019-02-07-2020-02-06 | net ret 0.02% ann'd
+[harness] Fold 6/12: train 2010-01-04-2020-01-07 | test 2020-02-07-2021-02-05 | net ret 3.30% ann'd
+[harness] Fold 7/12: train 2010-01-04-2021-01-06 | test 2021-02-08-2022-02-04 | net ret 1.03% ann'd
+[harness] Fold 8/12: train 2010-01-04-2022-01-05 | test 2022-02-07-2023-02-07 | net ret -3.74% ann'd
+[harness] Fold 9/12: train 2010-01-04-2023-01-06 | test 2023-02-08-2024-02-08 | net ret 3.42% ann'd
+[harness] Fold 10/12: train 2010-01-04-2024-01-09 | test 2024-02-09-2025-02-11 | net ret 2.38% ann'd
+[harness] Fold 11/12: train 2010-01-04-2025-01-10 | test 2025-02-12-2026-02-12 | net ret 0.34% ann'd
+[harness] Fold 12/12: train 2010-01-04-2026-01-13 | test 2026-02-13-2026-06-12 | net ret 1.81% ann'd
+
+============================================================
+s537 — Volatility Regime Ensemble
+============================================================
+SCORE                0.4435
+sharpe_net           0.4435
+sharpe_gross         0.5677
+deflated_sharpe      0.4435
+sortino              0.525
+max_dd_pct           -5.8
+ann_turnover         1.6
+n_trades             162
+win_rate             0.4982
+beta_spy             0.0
+oos_years            11.3
+
+---
+SCORE                0.4435
+sharpe_net           0.4435
+sharpe_gross         0.5677
+deflated_sharpe      0.4435
+sortino              0.525
+max_dd_pct           -5.8
+ann_turnover         1.6
+n_trades             162
+win_rate             0.4982
+beta_spy             0.0
+oos_years            11.3
+
+LEDGER_ROW	s537	vol-ensemble	spy-tlt	0.4435	0.4435	-5.8	1.6	0	keep	VOLREG: 5 vol signals (VIX TS, SPY RV, TLT RV, vol disp, vol-of-vol), disc 3-tier
