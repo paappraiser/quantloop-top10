@@ -10,7 +10,7 @@ Autonomous systematic strategy research — quantitative trading strategies gene
 - Drawdown gates: halve at 20%, flat at 30%
 - Minimum 100 trades, max 35% drawdown, deflated Sharpe > 0
 
-## Top 10 Leaderboard
+## Top 20 Leaderboard
 
 | Rank | ID | Strategy | Type | SCORE | Sharpe | Max DD | Trades |
 |------|----|----------|------|-------|--------|--------|--------|
@@ -23,7 +23,17 @@ Autonomous systematic strategy research — quantitative trading strategies gene
 | 7 | s016 | Magnitude-Weighted Reversal | Mean Reversion | **0.788** | 0.79 | -9.0% | — |
 | 8 | s525 | MRDv3 Continuous Sizing | Regime-Based | **0.743** | 0.74 | -4.6% | — |
 | 9 | s017 | Filtered Reversal | Mean Reversion | **0.729** | 0.73 | -11.1% | — |
-| 10 | s533 | Yield Curve Regime | Regime-Based | **0.627** | 0.63 | -3.1% | 276 |
+| 10 | s530 | Stress Score Persistence Sweep | Regime-Based | **0.686** | 0.69 | -4.5% | — |
+| 11 | s526 | MRDv4 Trend Filtered | Regime-Based | **0.678** | 0.68 | -3.9% | — |
+| 12 | s529 | MRD-V2 Stress Score | Regime-Based | **0.670** | 0.67 | -4.7% | — |
+| 13 | s533 | Yield Curve Regime | Regime-Based | **0.627** | 0.63 | -3.1% | 276 |
+| 14 | s019 | Combined Reversal + Momentum | Multi-Factor | **0.623** | 0.62 | -13.9% | — |
+| 15 | s531 | Inflation Regime | Regime-Based | **0.450** | 0.45 | -4.5% | 225 |
+| 16 | s018 | Short-term Reversal (200 stocks) | Mean Reversion | **0.439** | 0.44 | -12.5% | — |
+| 17 | s010 | 50/200 MA Crossover | Trend Following | **0.410** | 0.41 | -17.3% | — |
+| 18 | s008 | VIX-Filtered Trend | Trend Following | **0.359** | 0.36 | -15.9% | — |
+| 19 | s101 | Weekly Reversal S&P 100 | Mean Reversion | **0.353** | 0.35 | -19.2% | — |
+| 20 | s006 | Enhanced Trend (12-ETF) | Trend Following | **0.317** | 0.32 | -16.3% | — |
 
 ## Strategy Families
 
@@ -59,9 +69,7 @@ quantloop-top10/
 ├── ledger.tsv              # Complete experiment log
 ├── program.md              # Research protocol + evolving heuristics
 └── champions/
-    ├── s532/               # Risk Appetite Regime (current champion)
-    │   ├── spec.md         # Full strategy specification (14 sections)
-    │   └── strategy.py     # Implementation against harness API
+    ├── s532/               # Risk Appetite Regime (champion)
     ├── s534/               # Macro Quadrant
     ├── s524/               # MRDv2 Regime Detection
     ├── s528/               # Regime Sector Rotation
@@ -70,7 +78,17 @@ quantloop-top10/
     ├── s016/               # Magnitude-Weighted Reversal
     ├── s525/               # MRDv3 Continuous Sizing
     ├── s017/               # Filtered Reversal
-    └── s533/               # Yield Curve Regime
+    ├── s530/               # Stress Score Persistence Sweep
+    ├── s526/               # MRDv4 Trend Filtered
+    ├── s529/               # MRD-V2 Stress Score
+    ├── s533/               # Yield Curve Regime
+    ├── s019/               # Combined Reversal + Momentum
+    ├── s531/               # Inflation Regime
+    ├── s018/               # Short-term Reversal (200 stocks)
+    ├── s010/               # 50/200 MA Crossover
+    ├── s008/               # VIX-Filtered Trend
+    ├── s101/               # Weekly Reversal S&P 100
+    └── s006/               # Enhanced Trend (12-ETF)
 ```
 
 ## How to Run

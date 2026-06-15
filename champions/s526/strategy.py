@@ -1,0 +1,203 @@
+#!/usr/bin/env python3
+"""s526 — MRDv4: Regime Detection + 200-day MA Trend Filter
+
+Champion config (s524) with the 200-day MA filter from the original prompt:
+  only go long SPY when SPY > 200d MA, otherwise TLT regardless.
+  
+Applied to the champion s524 (discrete, ben=2, str=-1, gap=2d).
+"""
+
+import sys
+from pathlib import Path
+import warnings
+
+import numpy as np
+import pandas as pd
+import yfinance as yf
+
+HERE = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(HERE))
+from harness import download_data, run_evaluation
+
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=pd.errors.PerformanceWarning)
+
+CACHE_DIR = HERE / "data"
+
+
+def download_regime_data(start="2005-01-01"):
+    cache_file = CACHE_DIR / "s523_regime_data.pkl"
+    if cache_file.exists():
+        print("[s526] Loading regime data from cache …", file=sys.stderr)
+        return pd.read_pickle(cache_file)
+    print("[s526] Downloading all regime data …", file=sys.stderr)
+    spy_ohlcv = yf.download("SPY", start=start, auto_adjust=True, progress=False)
+    if isinstance(spy_ohlcv.columns, pd.MultiIndex):
+        spy_ohlcv = spy_ohlcv.xs("SPY", axis=1, level=1)
+    spy_ohlcv.columns = [c.lower() for c in spy_ohlcv.columns]
+    spy_ohlcv.index = pd.to_datetime(spy_ohlcv.index)
+
+    def _fetch_index(ticker):
+        df = yf.download(ticker, start=start, auto_adjust=False, progress=False)
+        if isinstance(df.columns, pd.MultiIndex):
+            close = df.xs(ticker, axis=1, level=1)["Close"]
+        else:
+            close = df["Close"] if "Close" in df.columns else df.iloc[:, 0]
+        close.index = pd.to_datetime(close.index)
+        return close
+
+    vix = _fetch_index("^VIX")
+    try:
+        vix3m = _fetch_index("^VIX3M")
+    except Exception:
+        vix3m = vix.copy()
+    skew = _fetch_index("^SKEW")
+
+    etf_data = yf.download(
+        ["SPY", "TLT", "HYG", "LQD"],
+        start=start, auto_adjust=True, progress=False,
+    )
+    if isinstance(etf_data.columns, pd.MultiIndex):
+        etf_close = etf_data.xs("Close", axis=1, level=0)
+    else:
+        etf_close = etf_data[["SPY", "TLT", "HYG", "LQD"]]
+    etf_close.columns = [c.strip().upper() for c in etf_close.columns]
+    etf_close.index = pd.to_datetime(etf_close.index)
+
+    result = {
+        "spy_ohlcv": spy_ohlcv,
+        "vix": vix, "vix3m": vix3m, "skew": skew,
+        "spy": etf_close["SPY"], "tlt": etf_close["TLT"],
+        "hyg": etf_close["HYG"], "lqd": etf_close["LQD"],
+    }
+    pd.to_pickle(result, cache_file)
+    return result
+
+
+def compute_regime_signals(data):
+    spy_c = data["spy"]; tlt = data["tlt"]; hyg = data["hyg"]; lqd = data["lqd"]
+    vix = data["vix"]; vix3m = data["vix3m"]; skew = data["skew"]
+
+    all_dates = spy_c.index.union(tlt.index).sort_values()
+    df = pd.DataFrame(index=all_dates)
+
+    vix_a = vix.reindex(df.index).ffill()
+    vix3m_a = vix3m.reindex(df.index).ffill()
+    df["signal_1_vix_ts"] = np.where(vix_a / vix3m_a.clip(lower=1e-6) < 1.0, 1, -1)
+
+    spy_rets = spy_c.reindex(df.index).pct_change()
+    rv_5 = spy_rets.rolling(5, min_periods=3).std() * np.sqrt(252)
+    rv_21 = spy_rets.rolling(21, min_periods=10).std() * np.sqrt(252)
+    df["signal_2_rv_trend"] = np.where(
+        (rv_5 / rv_21.clip(lower=1e-8)).rolling(5, min_periods=3).mean() < 1.0, 1, -1)
+
+    spy_r = spy_c.reindex(df.index).pct_change()
+    tlt_r = tlt.reindex(df.index).pct_change()
+    df["signal_3_corr"] = np.where(spy_r.rolling(20, min_periods=10).corr(tlt_r) < 0.1, 1, -1)
+
+    hy_lq = hyg.reindex(df.index) / lqd.reindex(df.index).clip(lower=1e-8)
+    df["signal_4_credit"] = np.where(
+        hy_lq.rolling(10, min_periods=5).mean() > hy_lq.rolling(30, min_periods=15).mean(), 1, -1)
+
+    skew_a = skew.reindex(df.index).ffill()
+    df["signal_5_skew"] = np.where(skew_a.diff(20) < 5.0, 1, -1)
+
+    signal_cols = [c for c in df.columns if c.startswith("signal_")]
+    df["composite"] = df[signal_cols].sum(axis=1).fillna(0.0)
+    for c in signal_cols:
+        df[c] = df[c].fillna(0)
+    return df
+
+
+def make_signal(regime_df, prices_full, benign_threshold=2, stressed_threshold=-1, rebalance_gap=2):
+    """Factory with 200-day MA filter."""
+    # Precompute 200-day MA of SPY (point-in-time)
+    spy_200ma = prices_full["SPY"].rolling(200, min_periods=100).mean()
+
+    def regime_signal(train_px, test_px, **kw):
+        tickers = list(test_px.columns)
+        weights_list = []
+        prev_weights = None
+        reg_aligned = regime_df.reindex(test_px.index).ffill()
+        spy_ma = spy_200ma.reindex(test_px.index).ffill()
+
+        for i, date in enumerate(test_px.index):
+            is_rebal = (i == 0) or (date - test_px.index[i - 1]).days >= rebalance_gap
+            if not is_rebal and prev_weights is not None:
+                weights_list.append(prev_weights.copy())
+                continue
+
+            if i == 0:
+                prior = reg_aligned.index[reg_aligned.index < date]
+                score = reg_aligned.loc[prior[-1], "composite"] if len(prior) > 0 else 0.0
+            else:
+                prev_date = test_px.index[i - 1]
+                score = reg_aligned.loc[prev_date, "composite"] if prev_date in reg_aligned.index else 0.0
+
+            # 200-day MA filter: if SPY below MA, force TLT
+            spy_price = test_px.loc[date, "SPY"] if "SPY" in test_px.columns else 0
+            ma = spy_ma.loc[date] if date in spy_ma.index else 0
+            trend_filter = pd.notna(ma) and spy_price > ma
+
+            if not trend_filter:
+                spy_w = 0.0  # Below 200d MA → TLT regardless
+            else:
+                if score >= benign_threshold:
+                    spy_w = 1.0
+                elif score < stressed_threshold:
+                    spy_w = 0.0
+                else:
+                    spy_w = 0.5
+
+            w = pd.Series(0.0, index=tickers)
+            w["SPY"] = spy_w
+            if "TLT" in tickers:
+                w["TLT"] = 1.0 - spy_w
+
+            prev_weights = w
+            weights_list.append(w)
+
+        return pd.DataFrame(weights_list, index=test_px.index)
+    return regime_signal
+
+
+def main():
+    print("="*60, file=sys.stderr)
+    print("s526 — MRDv4: Regime Detection + 200d MA Filter", file=sys.stderr)
+    print("="*60, file=sys.stderr)
+
+    data = download_regime_data()
+    regime_df = compute_regime_signals(data)
+    print(f"[s526] Composite: mean={regime_df['composite'].mean():.2f}", file=sys.stderr)
+
+    prices = download_data(["SPY", "TLT"], start="2010-01-01", asset_class="etf")
+    print(f"[s526] Prices: {len(prices)} days", file=sys.stderr)
+
+    # Full price history (including before 2010 for 200d MA warmup)
+    prices_full = download_data(["SPY", "TLT"], start="2008-01-01", asset_class="etf")
+
+    signal_fn = make_signal(regime_df, prices_full, benign_threshold=2, stressed_threshold=-1, rebalance_gap=2)
+    metrics = run_evaluation(
+        prices=prices, signal_fn=signal_fn,
+        cost_bps=10, asset_class="etf",
+        n_trials=1, beta_ticker="SPY",
+    )
+
+    print(f"\n{'='*60}", file=sys.stderr)
+    print("s526 — Regime Detection + 200d MA Filter", file=sys.stderr)
+    print(f"Params: ben=2, str=-1, gap=2d, 200d MA trend filter", file=sys.stderr)
+    print('='*60, file=sys.stderr)
+    for k in ["SCORE", "sharpe_net", "sharpe_gross", "deflated_sharpe", "sortino",
+              "max_dd_pct", "ann_turnover", "n_trades", "win_rate", "beta_spy", "oos_years"]:
+        print(f"{k:20s} {metrics.get(k, 'N/A')}", file=sys.stderr)
+
+    score = metrics.get("SCORE", 0)
+    print(f"\nLEDGER_ROW\ts526\tregime-detection\tspy-tlt\t"
+          f"{metrics.get('SCORE',0)}\t{metrics.get('sharpe_net',0)}\t"
+          f"{metrics.get('max_dd_pct',0)}\t{metrics.get('ann_turnover',0)}\t"
+          f"3\t{'keep' if score > 0 else 'discard'}\t"
+          f"MRDv4: champion config + 200d MA trend filter (SPY>200MA required for SPY)")
+
+
+if __name__ == "__main__":
+    main()
