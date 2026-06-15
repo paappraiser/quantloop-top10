@@ -1,0 +1,34 @@
+id	family	universe	score	sharpe_net	max_dd	turnover	n_params	status	description
+s001	momentum	sector-etf	0.0	-0.0374	-9.6	2.4	1	discard	baseline 12-1 cross-sectional momentum on 9 SPDR sector ETFs, monthly rebalance
+s002	stat-arb	sector-etf	0.0	-0.4288	-16.0	10.7	3	discard	pairs mean-reversion on 9 SPDR sector ETFs, entry_z=2.0, exit_z=0.25, lookback=40
+s003	trend-following	multi-asset	0.1079	0.1079	-17.6	8.7	1	keep	time-series momentum on 8 multi-asset ETFs, lookback=252, weekly rebalance
+s004	trend-following	multi-asset	0.0749	0.0749	-14.2	13.3	1	keep	dual-momentum trend (fast=63, slow=252) on 8 multi-asset ETFs
+s005	factor	sector-etf	0.0	-0.4124	-20.5	7.1	1	discard	cross-sectional low-vol on 9 SPDR sector ETFs, 60d vol lookback, weekly rebalance
+s006	trend-following	multi-asset	0.3167	0.3167	-16.3	12.7	1	keep	trend-following on 12 ETF universe (equities+bonds+commodities+FX), lookback=252
+s007	trend-following	multi-asset	0.1746	0.1746	-15.8	19.1	1	keep	dual-momentum trend (fast=63, slow=252) on 12-ETF universe
+s008	trend-following	multi-asset	0.3585	0.3585	-15.9	16.0	1	keep	trend-following with VIX>30 flat filter on 12-ETF universe, lookback=252
+s009	momentum	broad-etf	0.1401	0.1401	-18.7	5.7	1	keep	cross-sectional momentum on 30 ETF universe, top5/bottom5, monthly rebalance, lookback=252
+s010	trend-following	multi-asset	0.4096	0.4096	-17.3	3.6	1	keep	50/200 day MA crossover on 12-ETF universe, weekly rebalance, vol-scaled
+s011	carry	credit	0.0	-0.087	-6.1	1.5	2	discard	credit spread carry: long HYG, short TLT, momentum filter avoids credit crises
+s012	momentum	sp100	0.0	0.1702	-35.1	9.2	1	discard	cross-sectional momentum on S&P 100 stocks, top10/bottom10, monthly rebalance, lookback=252
+s013	mean-reversion	sp100	0.7883	0.7883	-11.1	12.9	1	keep	short-term mean reversion on S&P 100 stocks, 5-day reversal, weekly rebalance
+s014	mean-reversion	sp100	0.0	-0.1625	-15.8	17.0	2	discard	enhanced mean reversion on S&P 100, 10-day reversal, biweekly, min_move=2%
+s015	mean-reversion	sp100	0.8588	0.8588	-5.8	4.8	1	keep	concentrated mean reversion on S&P 100, 5-day reversal, top5/bottom5, magnitude-weighted
+s016	mean-reversion	sp100	0.7878	0.7878	-9.0	9.8	1	keep	magnitude-weighted reversal S&P 100, 5-day, 10/10 positions, weekly
+s017	mean-reversion	sp100	0.7287	0.7287	-11.1	13.9	1	keep	filtered reversal S&P 100, 5-day, 10/10, min_move=1%
+s018	mean-reversion	sp200	0.4386	0.4386	-12.5	12.0	1	keep	short-term reversal on 200 stocks, 15/15, weekly, equal-weight
+s019	multi-factor	sp100	0.6232	0.6232	-13.9	9.9	2	keep	combined 5d reversal + 12m momentum on S&P 100, z-score composite, 8/8, weekly
+s020	mean-reversion	sp100	0.0	0.0	0.0	0.0	1	discard	2-day reversal S&P 100, daily rebalance, top5/bottom5
+s101	mean-reversion	sp100	0.353	0.353	-19.2	11.2	2	keep	weekly reversal S&P 100, 5/5 equal-weight, lookback=5d (CORRECTED HARNESS - TRUE CHAMPION)
+s523	regime-detection	spy-tlt	0.0	0.5911	-3.6	0.3	2	discard	MRD baseline: 5-signal composite, gap=4d weekly rebalance, failed n_trades gate (31)
+s524	regime-detection	spy-tlt	0.8727	0.8727	-2.9	1.7	2	keep	MRDv2 champion: 5-signal composite, benign≥2/stressed<-1, gap=2d rebalance, SR=0.873, DD=-2.9%
+s525	regime-detection	spy-tlt	0.7427	0.7427	-4.6	2.1	1	keep	MRDv3 continuous sizing: spy_w=(composite+5)/10, daily rebalance, SR=0.743, DD=-4.6%
+s526	regime-detection	spy-tlt	0.6785	0.6785	-3.9	1.7	3	keep	MRDv4: champion s524 + 200d MA trend filter. MA filter REDUCES Sharpe (0.873→0.678). Regime signals already capture trend.
+s527	regime-detection	spy-tlt	0.8727	0.8727	-2.9	1.7	3	keep	MRDv5: 5-signal composite with 252d rolling accuracy weighting, gap=2d rebalance. SR=0.873, identical to s524 (all signals ~0.50 accuracy)
+s528	regime-sector-rot	spy-tlt-sectors	0.8623	0.8623	-5.3	3.5	2	keep	Regime-Based Sector Rotation (fixed): XLE excluded, gap=2d rebalance. Benign→XLK+XLF, Stressed→XLU, Neutral→top2 of 3. SR=0.862, DD=-5.3%, 183 trades.
+s529	regime-detection-stress	spy-tlt	0.6697	0.6697	-4.7	1.1	3	keep	MRD-V2 Stress Score: rolling z-scores + sigmoid + persistence + trend filter. Beat HMM (0.000, 80 trades). Winning arch. V2 doesn't beat V1 (s524=0.873).
+s530	regime-detection-stress	spy-tlt	0.6856	0.6856	-4.5	1.2	1	keep	Persistence sweep on s529 Stress Score: persistence=1-10d. Best p=1d (SR=0.686), worst p=10d (0.656). Signal is smooth enough without extra smoothing.
+s531	inflation-regime	spy-tlt	0.4499	0.4499	-4.5	2.4	0	keep	INFLREGv5: 5-signal (4 binary 20d + daily BE), discrete 3-tier SPY/TLT/neutral, gap=2d
+s532	risk-appetite-regime	spy-tlt	0.9614	0.9614	-3.6	1.4	0	keep	RISKREG: 4-signal (credit, VIX, SPY/TLT corr, gold) dynamic, 3-tier RO/Neutral/Roff, gap=2d. NEW CHAMPION beats s524(0.873) by 10%
+s533	yield-curve-regime	spy-tlt	0.6269	0.6269	-3.1	2.9	0	keep	YCREGv3: 3-signal (10d slope/level/rate) + daily Δcurve, discrete 3-tier, DD=-3.1% (cleanest)
+s534	macro-quadrant-regime	spy-tlt-gld	0.8913	0.8913	-5.1	1.6	0	keep	MACRO4: 2×2 growth×inflation quadrant (Goldilocks/Overheat/Recession/Stagflation), SPY+TLT+GLD, gap=2d
