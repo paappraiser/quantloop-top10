@@ -1,0 +1,300 @@
+========================================================================
+HC-MOM WAVE 3: Alt-Asset TS Momentum Deep Dive
+Universe: ['BAM', 'KKR', 'APO', 'BX', 'ARES', 'CG', 'TPG']
+========================================================================
+Valid alt tickers: ['BAM', 'KKR', 'APO', 'BX', 'ARES', 'CG', 'TPG']
+
+Testing 14 configurations...
+
+s571: ALT-MOM: lookback=21, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.8183
+sharpe_net           0.8183
+sharpe_gross         0.8729
+deflated_sharpe      45.0951
+sortino              0.9403
+max_dd_pct           -13.8
+ann_turnover         1.9
+n_trades             201
+win_rate             0.416
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.8183 SR=0.8183 DD=-13.8% TO=1.9 trades=201 → keep
+
+s572: ALT-MOM: lookback=42, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.9937
+sharpe_net           0.9937
+sharpe_gross         1.0576
+deflated_sharpe      55.4309
+sortino              1.1688
+max_dd_pct           -13.9
+ann_turnover         1.6
+n_trades             210
+win_rate             0.4275
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.9937 SR=0.9937 DD=-13.9% TO=1.6 trades=210 → keep
+
+s573: ALT-MOM: lookback=63, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.835
+sharpe_net           0.835
+sharpe_gross         0.8912
+deflated_sharpe      46.0794
+sortino              1.0136
+max_dd_pct           -19.3
+ann_turnover         1.6
+n_trades             226
+win_rate             0.4376
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.8350 SR=0.8350 DD=-19.3% TO=1.6 trades=226 → keep
+
+s574: ALT-MOM: lookback=84, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.9439
+sharpe_net           0.9439
+sharpe_gross         0.9894
+deflated_sharpe      52.4955
+sortino              1.1143
+max_dd_pct           -15.2
+ann_turnover         1.4
+n_trades             230
+win_rate             0.4247
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.9439 SR=0.9439 DD=-15.2% TO=1.4 trades=230 → keep
+
+s575: ALT-MOM: lookback=126, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                1.0646
+sharpe_net           1.0646
+sharpe_gross         1.1241
+deflated_sharpe      59.605
+sortino              1.2784
+max_dd_pct           -14.0
+ann_turnover         1.2
+n_trades             187
+win_rate             0.4512
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=1.0646 SR=1.0646 DD=-14.0% TO=1.2 trades=187 → keep
+
+s576: ALT-MOM: lookback=168, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.9122
+sharpe_net           0.9122
+sharpe_gross         0.965
+deflated_sharpe      50.627
+sortino              1.1066
+max_dd_pct           -13.6
+ann_turnover         1.1
+n_trades             189
+win_rate             0.4621
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.9122 SR=0.9122 DD=-13.6% TO=1.1 trades=189 → keep
+
+s577: ALT-MOM: lookback=189, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.9629
+sharpe_net           0.9629
+sharpe_gross         1.0186
+deflated_sharpe      53.6182
+sortino              1.1726
+max_dd_pct           -16.4
+ann_turnover         1.0
+n_trades             189
+win_rate             0.4572
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.9629 SR=0.9629 DD=-16.4% TO=1.0 trades=189 → keep
+
+s578: ALT-MOM: lookback=252, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                1.0573
+sharpe_net           1.0573
+sharpe_gross         1.1093
+deflated_sharpe      59.1783
+sortino              1.3174
+max_dd_pct           -13.5
+ann_turnover         1.0
+n_trades             189
+win_rate             0.4774
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=1.0573 SR=1.0573 DD=-13.5% TO=1.0 trades=189 → keep
+
+s579: ALT-MOM: lookback=378, eq-wt, gap=4 (weekly), alt-asset
+
+---
+SCORE                0.8559
+sharpe_net           0.8559
+sharpe_gross         0.8909
+deflated_sharpe      47.3137
+sortino              1.0587
+max_dd_pct           -14.5
+ann_turnover         0.9
+n_trades             173
+win_rate             0.4618
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.8559 SR=0.8559 DD=-14.5% TO=0.9 trades=173 → keep
+
+s580: ALT-GAP: lookback=42, eq-wt, gap=5d, alt-asset
+
+---
+SCORE                1.0307
+sharpe_net           1.0307
+sharpe_gross         1.0709
+deflated_sharpe      57.6123
+sortino              1.3442
+max_dd_pct           -14.7
+ann_turnover         0.8
+n_trades             188
+win_rate             0.501
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=1.0307 SR=1.0307 DD=-14.7% TO=0.8 trades=188 → keep
+
+s581: ALT-GAP: lookback=42, eq-wt, gap=7d, alt-asset
+
+---
+SCORE                1.0341
+sharpe_net           1.0341
+sharpe_gross         1.073
+deflated_sharpe      57.8134
+sortino              1.3458
+max_dd_pct           -14.7
+ann_turnover         0.7
+n_trades             177
+win_rate             0.501
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=1.0341 SR=1.0341 DD=-14.7% TO=0.7 trades=177 → keep
+
+s582: ALT-GAP: lookback=42, eq-wt, gap=10d, alt-asset
+
+---
+SCORE                1.0341
+sharpe_net           1.0341
+sharpe_gross         1.073
+deflated_sharpe      57.8134
+sortino              1.3458
+max_dd_pct           -14.7
+ann_turnover         0.7
+n_trades             177
+win_rate             0.501
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=1.0341 SR=1.0341 DD=-14.7% TO=0.7 trades=177 → keep
+
+s583: ALT-WT: lookback=42, weighting=strength, gap=4, alt-asset
+
+---
+SCORE                0.9717
+sharpe_net           0.9717
+sharpe_gross         1.0356
+deflated_sharpe      54.135
+sortino              1.1463
+max_dd_pct           -13.3
+ann_turnover         1.6
+n_trades             180
+win_rate             0.4301
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.9717 SR=0.9717 DD=-13.3% TO=1.6 trades=180 → keep
+
+s584: ALT-WT: lookback=42, weighting=equal, gap=4, alt-asset
+
+---
+SCORE                0.9937
+sharpe_net           0.9937
+sharpe_gross         1.0576
+deflated_sharpe      55.4309
+sortino              1.1688
+max_dd_pct           -13.9
+ann_turnover         1.6
+n_trades             210
+win_rate             0.4275
+beta_spy             0.0
+oos_years            13.9
+  → SCORE=0.9937 SR=0.9937 DD=-13.9% TO=1.6 trades=210 → keep
+
+========================================================================
+WAVE 3 SUMMARY — Alt-Asset TS Momentum Lookback Sweep
+========================================================================
+   ID   Score      SR      DD    TO    Tr   Status  Description
+------------------------------------------------------------------------
+  575  1.0646  1.0646  -14.0%  1.2×  187     keep  ALT-MOM: lookback=126, eq-wt, gap=4 (weekly), alt-asset
+  578  1.0573  1.0573  -13.5%  1.0×  189     keep  ALT-MOM: lookback=252, eq-wt, gap=4 (weekly), alt-asset
+  581  1.0341  1.0341  -14.7%  0.7×  177     keep  ALT-GAP: lookback=42, eq-wt, gap=7d, alt-asset
+  582  1.0341  1.0341  -14.7%  0.7×  177     keep  ALT-GAP: lookback=42, eq-wt, gap=10d, alt-asset
+  580  1.0307  1.0307  -14.7%  0.8×  188     keep  ALT-GAP: lookback=42, eq-wt, gap=5d, alt-asset
+  572  0.9937  0.9937  -13.9%  1.6×  210     keep  ALT-MOM: lookback=42, eq-wt, gap=4 (weekly), alt-asset
+  584  0.9937  0.9937  -13.9%  1.6×  210     keep  ALT-WT: lookback=42, weighting=equal, gap=4, alt-asset
+  583  0.9717  0.9717  -13.3%  1.6×  180     keep  ALT-WT: lookback=42, weighting=strength, gap=4, alt-asset
+  577  0.9629  0.9629  -16.4%  1.0×  189     keep  ALT-MOM: lookback=189, eq-wt, gap=4 (weekly), alt-asset
+  574  0.9439  0.9439  -15.2%  1.4×  230     keep  ALT-MOM: lookback=84, eq-wt, gap=4 (weekly), alt-asset
+  576  0.9122  0.9122  -13.6%  1.1×  189     keep  ALT-MOM: lookback=168, eq-wt, gap=4 (weekly), alt-asset
+  579  0.8559  0.8559  -14.5%  0.9×  173     keep  ALT-MOM: lookback=378, eq-wt, gap=4 (weekly), alt-asset
+  573  0.8350  0.8350  -19.3%  1.6×  226     keep  ALT-MOM: lookback=63, eq-wt, gap=4 (weekly), alt-asset
+  571  0.8183  0.8183  -13.8%  1.9×  201     keep  ALT-MOM: lookback=21, eq-wt, gap=4 (weekly), alt-asset
+
+Keepers: 14
+
+BEST: s575 — SCORE=1.0646 SR=1.0646 DD=-14.0%
+      ALT-MOM: lookback=126, eq-wt, gap=4 (weekly), alt-asset
+
+TOP 5:
+  1. s575: ALT-MOM: lookback=126, eq-wt, gap=4 (weekly), alt-asset → SR 1.0646 DD -14.0% TO 1.2×
+  2. s578: ALT-MOM: lookback=252, eq-wt, gap=4 (weekly), alt-asset → SR 1.0573 DD -13.5% TO 1.0×
+  3. s581: ALT-GAP: lookback=42, eq-wt, gap=7d, alt-asset → SR 1.0341 DD -14.7% TO 0.7×
+  4. s582: ALT-GAP: lookback=42, eq-wt, gap=10d, alt-asset → SR 1.0341 DD -14.7% TO 0.7×
+  5. s580: ALT-GAP: lookback=42, eq-wt, gap=5d, alt-asset → SR 1.0307 DD -14.7% TO 0.8×
+
+────────────────────────────────────────────────────────────────────────
+COMPARISON:
+  s542 (QQQ/SPY dispersion) — SR 1.1819 ← GLOBAL CHAMPION
+  s565 (alt-asset, lb=42)   — SR 1.1284 ← best so far
+
+--- LEDGER ROWS ---
+
+LEDGER_ROW	s571	alt-mom	alt-asset-mgr	0.8183	0.8183	-13.8	1.9	1	keep	ALT-MOM: lookback=21, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s572	alt-mom	alt-asset-mgr	0.9937	0.9937	-13.9	1.6	1	keep	ALT-MOM: lookback=42, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s573	alt-mom	alt-asset-mgr	0.835	0.835	-19.3	1.6	1	keep	ALT-MOM: lookback=63, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s574	alt-mom	alt-asset-mgr	0.9439	0.9439	-15.2	1.4	1	keep	ALT-MOM: lookback=84, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s575	alt-mom	alt-asset-mgr	1.0646	1.0646	-14.0	1.2	1	keep	ALT-MOM: lookback=126, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s576	alt-mom	alt-asset-mgr	0.9122	0.9122	-13.6	1.1	1	keep	ALT-MOM: lookback=168, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s577	alt-mom	alt-asset-mgr	0.9629	0.9629	-16.4	1.0	1	keep	ALT-MOM: lookback=189, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s578	alt-mom	alt-asset-mgr	1.0573	1.0573	-13.5	1.0	1	keep	ALT-MOM: lookback=252, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s579	alt-mom	alt-asset-mgr	0.8559	0.8559	-14.5	0.9	1	keep	ALT-MOM: lookback=378, eq-wt, gap=4 (weekly), alt-asset
+
+LEDGER_ROW	s580	alt-mom-gap	alt-asset-mgr	1.0307	1.0307	-14.7	0.8	1	keep	ALT-GAP: lookback=42, eq-wt, gap=5d, alt-asset
+
+LEDGER_ROW	s581	alt-mom-gap	alt-asset-mgr	1.0341	1.0341	-14.7	0.7	1	keep	ALT-GAP: lookback=42, eq-wt, gap=7d, alt-asset
+
+LEDGER_ROW	s582	alt-mom-gap	alt-asset-mgr	1.0341	1.0341	-14.7	0.7	1	keep	ALT-GAP: lookback=42, eq-wt, gap=10d, alt-asset
+
+LEDGER_ROW	s583	alt-mom-weight	alt-asset-mgr	0.9717	0.9717	-13.3	1.6	1	keep	ALT-WT: lookback=42, weighting=strength, gap=4, alt-asset
+
+LEDGER_ROW	s584	alt-mom-weight	alt-asset-mgr	0.9937	0.9937	-13.9	1.6	1	keep	ALT-WT: lookback=42, weighting=equal, gap=4, alt-asset
+
+Done.

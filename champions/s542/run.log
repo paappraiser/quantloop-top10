@@ -1,0 +1,44 @@
+============================================================
+s542 — QQQ/SPY Ratio Mean Reversion
+============================================================
+[s542] Loading from cache …
+[s542] Ratio z: mean=0.67, std=1.26
+[harness] Loaded 2 tickers from cache (5fa7a90f6d00.csv)
+[harness] Fold 1/12: train 2010-01-04-2015-01-05 | test 2015-02-05-2016-02-04 | net ret 0.86% ann'd
+[harness] Fold 2/12: train 2010-01-04-2016-01-05 | test 2016-02-05-2017-02-03 | net ret 3.60% ann'd
+[harness] Fold 3/12: train 2010-01-04-2017-01-04 | test 2017-02-06-2018-02-05 | net ret 3.25% ann'd
+[harness] Fold 4/12: train 2010-01-04-2018-01-04 | test 2018-02-06-2019-02-06 | net ret 0.15% ann'd
+[harness] Fold 5/12: train 2010-01-04-2019-01-07 | test 2019-02-07-2020-02-06 | net ret 5.25% ann'd
+[harness] Fold 6/12: train 2010-01-04-2020-01-07 | test 2020-02-07-2021-02-05 | net ret 6.03% ann'd
+[harness] Fold 7/12: train 2010-01-04-2021-01-06 | test 2021-02-08-2022-02-04 | net ret 4.09% ann'd
+[harness] Fold 8/12: train 2010-01-04-2022-01-05 | test 2022-02-07-2023-02-07 | net ret -0.15% ann'd
+[harness] Fold 9/12: train 2010-01-04-2023-01-06 | test 2023-02-08-2024-02-08 | net ret 4.23% ann'd
+[harness] Fold 10/12: train 2010-01-04-2024-01-09 | test 2024-02-09-2025-02-11 | net ret 2.89% ann'd
+[harness] Fold 11/12: train 2010-01-04-2025-01-10 | test 2025-02-12-2026-02-12 | net ret 3.70% ann'd
+[harness] Fold 12/12: train 2010-01-04-2026-01-13 | test 2026-02-13-2026-06-15 | net ret 8.78% ann'd
+SCORE                1.1819
+sharpe_net           1.1819
+sharpe_gross         1.3276
+deflated_sharpe      1.1819
+sortino              1.4267
+max_dd_pct           -4.4
+ann_turnover         1.5
+n_trades             163
+win_rate             0.5136
+beta_spy             0.0
+oos_years            11.3
+
+---
+SCORE                1.1819
+sharpe_net           1.1819
+sharpe_gross         1.3276
+deflated_sharpe      1.1819
+sortino              1.4267
+max_dd_pct           -4.4
+ann_turnover         1.5
+n_trades             163
+win_rate             0.5136
+beta_spy             0.0
+oos_years            11.3
+
+LEDGER_ROW	s542	qqq-spy-dispersion	qqq-spy	1.1819	1.1819	-4.4	1.5	0	keep	DISPERSION: QQQ/SPY ratio z-score mean reversion (252d), 3-tier alloc

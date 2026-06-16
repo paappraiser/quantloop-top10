@@ -40,3 +40,18 @@ s539	tail-risk-regime	spy-tlt-gld	0.7042	0.7042	-4.0	3.3	0	keep	TAILREG: SKEW/VI
 s540	factor-rotation	mtum-qual-usmv-vlue	0.6838	0.6838	-7.5	4.2	0	keep	FACTOR: 3 macro signals (vol/growth/yield)+daily delta, MTUM/QUAL/USMV/VLUE top2, DD=-7.5%
 s541	multi-asset-momentum	8-etf-global	0.2831	0.2831	-11.7	4.6	2	keep	XS-MOM: 252d lookback, top/bottom 3 of 8 multi-asset ETFs (best of 6 sweep)
 s543	trend-following	8-etf-global	0.3249	0.3249	-14.9	3.9	1	keep	TREND: mom252, 8 multi-asset ETFs, equal-weight, weekly rebalance (best of 3 sweep)
+s541	qqq-regime	qqq-tlt	0.8756	0.8756	-4.7	1.9	0	keep	QQQREG: champion risk appetite recipe (credit+VIX+corr+gold) applied to QQQ+TLT. Proves regime signal is market-wide, not SPY-specific.
+s542	qqq-spy-dispersion	qqq-spy	1.1819	1.1819	-4.4	1.5	0	keep	DISPERSION: QQQ/SPY ratio z-score (252d) mean reversion. Buy QQQ cheap vs SPY, sell overextended. NEW CHAMPION beats s532(0.961) by 23%.
+s543	tech-vol-stress	qqq-tlt	0.817	0.817	-5.5	3.3	0	keep	VXNDIVERGE: VXN/VIX ratio divergence + VIX level + QQQ/TLT corr. Tech-specific vol signal independent of SPY.
+s544	crowd-reversal	spy-tlt	0.0562	0.0562	-6.5	4.6	0	discard	CROWD: aggregated 5d reversal z-score across 200 stocks. Signal too noisy (avg z-score near zero).
+s575	alt-mom	alt-asset-mgr	1.0646	1.0646	-14.0	1.2	1	keep	ALTTREND: TS momentum lb=126, eq-wt, gap=4d, 7 alt asset mgrs (BAM/KKR/APO/BX/ARES/CG/TPG). Second-highest SR ever.
+s578	alt-mom	alt-asset-mgr	1.0573	1.0573	-13.5	1.0	1	keep	ALT-MOM: TS momentum lb=252, eq-wt, gap=4d, 7 alt asset mgrs.
+s581	alt-mom-gap	alt-asset-mgr	1.0341	1.0341	-14.7	0.7	1	keep	ALT-GAP: TS mom lb=42, eq-wt, gap=7d, 7 alt asset mgrs.
+s572	alt-mom	alt-asset-mgr	0.9937	0.9937	-13.9	1.6	1	keep	ALT-MOM: TS momentum lb=42, eq-wt, gap=4d, 7 alt asset mgrs.
+s566	hc-mom-sub	all-asset-mgr	0.9492	0.9492	-14.5	2.7	1	keep	HC-SUB-AM: TS mom lb=42, eq-wt, 12 asset mgrs (alt+trad).
+s545	hc-mom	holding-co	0.9086	0.9086	-19.3	4.2	1	keep	HCTREND: TS momentum lb=42, long-only, eq-wt, 22 holding companies. First discovery.
+s562	hc-mom-weight	holding-co	0.9147	0.9147	-17.5	3.8	1	keep	HC-WEIGHT: TS mom lb=42, momentum-weighted, 22 holding cos.
+s546	pead-xs	sp-100	0.9882	0.9882	-8.5	12.4	2	keep	EARNPEAD: Cross-sectional PEAD S&P100, top5/bottom5 by earnings surprise, 21d hold, eq-wt. Beat s532(0.961) by 3%, #3 overall.
+s546	pead-xs	sp-100	0.8802	0.8802	-9.0	13.3	2	keep	EARNPEAD: Cross-sectional PEAD S&P100, top10/bottom10 by earnings surprise, 21d hold, eq-wt.
+s546	pead-xs	sp-100	0.4494	0.4494	-9.3	14.7	2	keep	EARNPEAD: Cross-sectional PEAD S&P100, top10/bottom10 by earnings surprise, 10d hold, eq-wt.
+s547	thematic-momentum	sp100	0.217	0.217	-22.6	12.8	3	keep	NEXTWAVE: thematic institutional rotation on S&P 100, n=5, lb=189d, theme_w=0.3, gap=10d. Theme signal adds +33% to pure momentum (baseline SR=0.163→0.217).

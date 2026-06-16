@@ -1,0 +1,356 @@
+========================================================================
+HC-MOM BATCH: Holding-Company Time-Series Momentum
+Universe: 23 tickers
+========================================================================
+Valid tickers: 22
+
+────────────────────────────────────────────────────────────
+s545: HCTREND: TS momentum lb=42, long-only, equal-weight, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.9086
+sharpe_net           0.9086
+sharpe_gross         0.9669
+deflated_sharpe      55.0277
+sortino              1.1294
+max_dd_pct           -19.3
+ann_turnover         4.2
+n_trades             905
+win_rate             0.4795
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.9086 SR=0.9086 DD=-19.3% TO=4.2 trades=905 → keep
+
+────────────────────────────────────────────────────────────
+s546: HCTREND: TS momentum lb=63, long-only, equal-weight, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8518
+sharpe_net           0.8518
+sharpe_gross         0.9084
+deflated_sharpe      51.3921
+sortino              1.0655
+max_dd_pct           -20.3
+ann_turnover         4.1
+n_trades             923
+win_rate             0.4831
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8518 SR=0.8518 DD=-20.3% TO=4.1 trades=923 → keep
+
+────────────────────────────────────────────────────────────
+s547: HCTREND: TS momentum lb=126, long-only, equal-weight, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8015
+sharpe_net           0.8015
+sharpe_gross         0.8484
+deflated_sharpe      48.1739
+sortino              1.0037
+max_dd_pct           -21.5
+ann_turnover         3.5
+n_trades             990
+win_rate             0.4875
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8015 SR=0.8015 DD=-21.5% TO=3.5 trades=990 → keep
+
+────────────────────────────────────────────────────────────
+s548: HCTREND: TS momentum lb=189, long-only, equal-weight, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8117
+sharpe_net           0.8117
+sharpe_gross         0.8651
+deflated_sharpe      48.8303
+sortino              1.018
+max_dd_pct           -21.3
+ann_turnover         3.1
+n_trades             993
+win_rate             0.4863
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8117 SR=0.8117 DD=-21.3% TO=3.1 trades=993 → keep
+
+────────────────────────────────────────────────────────────
+s549: HCTREND: TS momentum lb=252, long-only, equal-weight, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8136
+sharpe_net           0.8136
+sharpe_gross         0.8654
+deflated_sharpe      48.9498
+sortino              1.037
+max_dd_pct           -20.8
+ann_turnover         3.0
+n_trades             947
+win_rate             0.4946
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8136 SR=0.8136 DD=-20.8% TO=3.0 trades=947 → keep
+
+────────────────────────────────────────────────────────────
+s550: HCTREND-F: TS mom lb=63, min_ret=3%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8843
+sharpe_net           0.8843
+sharpe_gross         0.9415
+deflated_sharpe      53.4707
+sortino              1.1082
+max_dd_pct           -21.7
+ann_turnover         4.1
+n_trades             789
+win_rate             0.4826
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8843 SR=0.8843 DD=-21.7% TO=4.1 trades=789 → keep
+
+────────────────────────────────────────────────────────────
+s551: HCTREND-F: TS mom lb=63, min_ret=5%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8619
+sharpe_net           0.8619
+sharpe_gross         0.9176
+deflated_sharpe      52.0415
+sortino              1.0865
+max_dd_pct           -21.3
+ann_turnover         3.9
+n_trades             658
+win_rate             0.4758
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8619 SR=0.8619 DD=-21.3% TO=3.9 trades=658 → keep
+
+────────────────────────────────────────────────────────────
+s552: HCTREND-F: TS mom lb=63, min_ret=10%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.7194
+sharpe_net           0.7194
+sharpe_gross         0.7625
+deflated_sharpe      42.9259
+sortino              0.8388
+max_dd_pct           -19.2
+ann_turnover         3.2
+n_trades             452
+win_rate             0.4316
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.7194 SR=0.7194 DD=-19.2% TO=3.2 trades=452 → keep
+
+────────────────────────────────────────────────────────────
+s553: HCTREND-F: TS mom lb=126, min_ret=3%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.7629
+sharpe_net           0.7629
+sharpe_gross         0.8151
+deflated_sharpe      45.7046
+sortino              0.9483
+max_dd_pct           -20.9
+ann_turnover         3.6
+n_trades             905
+win_rate             0.478
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.7629 SR=0.7629 DD=-20.9% TO=3.6 trades=905 → keep
+
+────────────────────────────────────────────────────────────
+s554: HCTREND-F: TS mom lb=126, min_ret=5%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.7551
+sharpe_net           0.7551
+sharpe_gross         0.8127
+deflated_sharpe      45.2056
+sortino              0.933
+max_dd_pct           -19.3
+ann_turnover         3.6
+n_trades             843
+win_rate             0.4765
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.7551 SR=0.7551 DD=-19.3% TO=3.6 trades=843 → keep
+
+────────────────────────────────────────────────────────────
+s555: HCTREND-F: TS mom lb=126, min_ret=10%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.7014
+sharpe_net           0.7014
+sharpe_gross         0.7627
+deflated_sharpe      41.774
+sortino              0.8484
+max_dd_pct           -19.3
+ann_turnover         3.3
+n_trades             645
+win_rate             0.4504
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.7014 SR=0.7014 DD=-19.3% TO=3.3 trades=645 → keep
+
+────────────────────────────────────────────────────────────
+s556: HCTREND-F: TS mom lb=252, min_ret=3%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8488
+sharpe_net           0.8488
+sharpe_gross         0.8982
+deflated_sharpe      51.2019
+sortino              1.0664
+max_dd_pct           -20.6
+ann_turnover         3.0
+n_trades             894
+win_rate             0.4932
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8488 SR=0.8488 DD=-20.6% TO=3.0 trades=894 → keep
+
+────────────────────────────────────────────────────────────
+s557: HCTREND-F: TS mom lb=252, min_ret=5%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8405
+sharpe_net           0.8405
+sharpe_gross         0.8893
+deflated_sharpe      50.674
+sortino              1.0497
+max_dd_pct           -20.6
+ann_turnover         3.0
+n_trades             857
+win_rate             0.4934
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8405 SR=0.8405 DD=-20.6% TO=3.0 trades=857 → keep
+
+────────────────────────────────────────────────────────────
+s558: HCTREND-F: TS mom lb=252, min_ret=10%, long-only, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.8665
+sharpe_net           0.8665
+sharpe_gross         0.9218
+deflated_sharpe      52.3345
+sortino              1.0627
+max_dd_pct           -21.3
+ann_turnover         2.9
+n_trades             784
+win_rate             0.4817
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.8665 SR=0.8665 DD=-21.3% TO=2.9 trades=784 → keep
+
+────────────────────────────────────────────────────────────
+s559: HCTREND-LS: TS mom lb=126, L/S top/bottom third, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.0
+sharpe_net           0.0042
+sharpe_gross         0.0472
+deflated_sharpe      -2.8262
+sortino              0.0055
+max_dd_pct           -26.9
+ann_turnover         4.8
+n_trades             789
+win_rate             0.4736
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.0000 SR=0.0042 DD=-26.9% TO=4.8 trades=789 → discard
+
+────────────────────────────────────────────────────────────
+s560: HCTREND-LS: TS mom lb=252, L/S top/bottom third, weekly
+────────────────────────────────────────────────────────────
+
+---
+SCORE                0.1618
+sharpe_net           0.1618
+sharpe_gross         0.2038
+deflated_sharpe      7.2566
+sortino              0.2042
+max_dd_pct           -29.9
+ann_turnover         3.7
+n_trades             738
+win_rate             0.4826
+beta_spy             0.0
+oos_years            16.3
+  → SCORE=0.1618 SR=0.1618 DD=-29.9% TO=3.7 trades=738 → keep
+
+========================================================================
+BATCH SUMMARY — Holding Company Time-Series Momentum
+========================================================================
+   ID   Score      SR      DD     TO  Trades   Status  Variant
+------------------------------------------------------------------------
+  545  0.9086  0.9086  -19.3%   4.2×    905     keep  HCTREND: TS momentum lb=42, long-only, equal-weight, weekly
+  546  0.8518  0.8518  -20.3%   4.1×    923     keep  HCTREND: TS momentum lb=63, long-only, equal-weight, weekly
+  547  0.8015  0.8015  -21.5%   3.5×    990     keep  HCTREND: TS momentum lb=126, long-only, equal-weight, weekly
+  548  0.8117  0.8117  -21.3%   3.1×    993     keep  HCTREND: TS momentum lb=189, long-only, equal-weight, weekly
+  549  0.8136  0.8136  -20.8%   3.0×    947     keep  HCTREND: TS momentum lb=252, long-only, equal-weight, weekly
+  550  0.8843  0.8843  -21.7%   4.1×    789     keep  HCTREND-F: TS mom lb=63, min_ret=3%, long-only, weekly
+  551  0.8619  0.8619  -21.3%   3.9×    658     keep  HCTREND-F: TS mom lb=63, min_ret=5%, long-only, weekly
+  552  0.7194  0.7194  -19.2%   3.2×    452     keep  HCTREND-F: TS mom lb=63, min_ret=10%, long-only, weekly
+  553  0.7629  0.7629  -20.9%   3.6×    905     keep  HCTREND-F: TS mom lb=126, min_ret=3%, long-only, weekly
+  554  0.7551  0.7551  -19.3%   3.6×    843     keep  HCTREND-F: TS mom lb=126, min_ret=5%, long-only, weekly
+  555  0.7014  0.7014  -19.3%   3.3×    645     keep  HCTREND-F: TS mom lb=126, min_ret=10%, long-only, weekly
+  556  0.8488  0.8488  -20.6%   3.0×    894     keep  HCTREND-F: TS mom lb=252, min_ret=3%, long-only, weekly
+  557  0.8405  0.8405  -20.6%   3.0×    857     keep  HCTREND-F: TS mom lb=252, min_ret=5%, long-only, weekly
+  558  0.8665  0.8665  -21.3%   2.9×    784     keep  HCTREND-F: TS mom lb=252, min_ret=10%, long-only, weekly
+  559  0.0000  0.0042  -26.9%   4.8×    789  discard  HCTREND-LS: TS mom lb=126, L/S top/bottom third, weekly
+  560  0.1618  0.1618  -29.9%   3.7×    738     keep  HCTREND-LS: TS mom lb=252, L/S top/bottom third, weekly
+
+Keep: 15 | Discard: 1 | Crash: 0
+
+Best keeper: s545 — SCORE=0.9086 SR=0.9086 DD=-19.3%
+  HCTREND: TS momentum lb=42, long-only, equal-weight, weekly
+
+--- LEDGER ROWS ---
+
+LEDGER_ROW	s545	hc-mom	holding-co	0.9086	0.9086	-19.3	4.2	1	keep	HCTREND: TS momentum lb=42, long-only, equal-weight, weekly
+
+LEDGER_ROW	s546	hc-mom	holding-co	0.8518	0.8518	-20.3	4.1	1	keep	HCTREND: TS momentum lb=63, long-only, equal-weight, weekly
+
+LEDGER_ROW	s547	hc-mom	holding-co	0.8015	0.8015	-21.5	3.5	1	keep	HCTREND: TS momentum lb=126, long-only, equal-weight, weekly
+
+LEDGER_ROW	s548	hc-mom	holding-co	0.8117	0.8117	-21.3	3.1	1	keep	HCTREND: TS momentum lb=189, long-only, equal-weight, weekly
+
+LEDGER_ROW	s549	hc-mom	holding-co	0.8136	0.8136	-20.8	3.0	1	keep	HCTREND: TS momentum lb=252, long-only, equal-weight, weekly
+
+LEDGER_ROW	s550	hc-mom-filter	holding-co	0.8843	0.8843	-21.7	4.1	1	keep	HCTREND-F: TS mom lb=63, min_ret=3%, long-only, weekly
+
+LEDGER_ROW	s551	hc-mom-filter	holding-co	0.8619	0.8619	-21.3	3.9	1	keep	HCTREND-F: TS mom lb=63, min_ret=5%, long-only, weekly
+
+LEDGER_ROW	s552	hc-mom-filter	holding-co	0.7194	0.7194	-19.2	3.2	1	keep	HCTREND-F: TS mom lb=63, min_ret=10%, long-only, weekly
+
+LEDGER_ROW	s553	hc-mom-filter	holding-co	0.7629	0.7629	-20.9	3.6	1	keep	HCTREND-F: TS mom lb=126, min_ret=3%, long-only, weekly
+
+LEDGER_ROW	s554	hc-mom-filter	holding-co	0.7551	0.7551	-19.3	3.6	1	keep	HCTREND-F: TS mom lb=126, min_ret=5%, long-only, weekly
+
+LEDGER_ROW	s555	hc-mom-filter	holding-co	0.7014	0.7014	-19.3	3.3	1	keep	HCTREND-F: TS mom lb=126, min_ret=10%, long-only, weekly
+
+LEDGER_ROW	s556	hc-mom-filter	holding-co	0.8488	0.8488	-20.6	3.0	1	keep	HCTREND-F: TS mom lb=252, min_ret=3%, long-only, weekly
+
+LEDGER_ROW	s557	hc-mom-filter	holding-co	0.8405	0.8405	-20.6	3.0	1	keep	HCTREND-F: TS mom lb=252, min_ret=5%, long-only, weekly
+
+LEDGER_ROW	s558	hc-mom-filter	holding-co	0.8665	0.8665	-21.3	2.9	1	keep	HCTREND-F: TS mom lb=252, min_ret=10%, long-only, weekly
+
+LEDGER_ROW	s559	hc-mom-ls	holding-co	0.0	0.0042	-26.9	4.8	1	discard	HCTREND-LS: TS mom lb=126, L/S top/bottom third, weekly
+
+LEDGER_ROW	s560	hc-mom-ls	holding-co	0.1618	0.1618	-29.9	3.7	1	keep	HCTREND-LS: TS mom lb=252, L/S top/bottom third, weekly
+
+Done.

@@ -1,0 +1,626 @@
+============================================================
+s547 — NEXTWAVE: Thematic Institutional Rotation
+============================================================
+[harness] Loaded 91 tickers from cache (d473ae2712b4.csv)
+[s547] Theme scores assigned: 88/91 tickers
+
+[─] Testing: n=5, lb=126, tw=0.0
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 4.29% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -0.74% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -6.39% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret -8.56% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -14.96% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 1.64% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 1.93% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 5.09% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -8.34% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -18.79% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -1.34% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -12.90% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -5.07% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 0.58% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -4.04% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 10.55% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 42.57% ann'd
+
+[─] Testing: n=5, lb=126, tw=0.3
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret -5.29% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -4.68% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -4.77% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret -5.03% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -15.14% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret -4.44% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 3.10% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 7.11% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -5.22% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -12.05% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -3.01% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -12.97% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -7.18% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 3.33% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -2.96% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 13.25% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 36.09% ann'd
+
+[─] Testing: n=5, lb=126, tw=0.5
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret -4.23% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -3.45% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -6.98% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret -2.64% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -15.91% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret -3.37% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 8.87% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 2.47% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -5.36% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -18.72% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -6.77% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -13.47% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -5.93% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 2.16% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -7.59% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 17.74% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 38.78% ann'd
+
+[─] Testing: n=5, lb=189, tw=0.0
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 0.14% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret 1.49% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 8.92% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 10.65% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -0.54% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 0.10% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -0.01% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 8.39% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -7.58% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret 1.19% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -3.32% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -9.00% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -1.74% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 8.60% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -1.09% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret -0.71% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 49.31% ann'd
+
+[─] Testing: n=5, lb=189, tw=0.3
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 3.80% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret 1.66% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 1.18% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 13.08% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -3.60% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 0.73% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 1.04% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret -1.41% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -7.10% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret 6.48% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -0.29% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -7.30% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -2.72% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 9.93% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 1.37% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 7.98% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 49.21% ann'd
+
+[─] Testing: n=5, lb=189, tw=0.5
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 1.60% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret 4.43% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -0.05% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 6.08% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -0.50% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret -1.01% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 2.06% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret -1.66% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -4.66% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret 3.03% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -4.74% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -5.56% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -3.52% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 6.68% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 2.27% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 8.36% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 49.80% ann'd
+
+[─] Testing: n=5, lb=252, tw=0.0
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 4.31% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -1.34% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 7.62% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 10.44% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -10.81% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 12.61% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -2.76% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret -6.36% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -7.22% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -4.38% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -5.15% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -7.61% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -5.43% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 3.18% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 5.14% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 4.65% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 40.76% ann'd
+
+[─] Testing: n=5, lb=252, tw=0.3
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 4.49% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -1.91% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 8.46% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 16.07% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -14.01% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 9.80% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 2.55% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret -7.54% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -6.73% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret 1.05% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -5.49% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -3.16% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -2.08% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 7.66% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 7.79% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 3.23% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 46.12% ann'd
+
+[─] Testing: n=5, lb=252, tw=0.5
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 1.49% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -3.91% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 8.27% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 12.80% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -11.29% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 2.94% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 2.92% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret -2.26% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -6.65% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -5.19% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -5.59% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret 0.05% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -3.18% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 6.58% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 9.22% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 4.59% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 49.79% ann'd
+
+[─] Testing: n=8, lb=126, tw=0.0
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 1.51% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -3.02% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -3.31% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret -2.21% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -16.14% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 5.11% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -0.98% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 6.01% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -7.51% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -19.98% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -1.70% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -11.95% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -7.96% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 1.02% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -5.35% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 11.43% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 29.68% ann'd
+
+[─] Testing: n=8, lb=126, tw=0.3
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret -0.33% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -4.03% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -6.95% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret -6.50% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -17.83% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret -0.97% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -1.00% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 2.72% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -7.88% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -21.68% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -0.96% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -12.32% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -6.52% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 6.16% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -2.46% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 16.78% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 36.13% ann'd
+
+[─] Testing: n=8, lb=126, tw=0.5
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 0.64% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -3.74% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -8.82% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret -1.09% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -13.96% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret -1.56% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret 2.46% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 2.33% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -4.93% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -18.69% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -0.00% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -11.40% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -2.21% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 3.02% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret -2.07% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 15.25% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 28.32% ann'd
+
+[─] Testing: n=8, lb=189, tw=0.0
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 7.15% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -6.48% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 1.26% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 14.82% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -1.52% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 6.68% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -2.44% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 4.39% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -13.97% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -0.96% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -2.38% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -5.15% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -2.82% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 6.14% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 6.09% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 4.66% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 50.38% ann'd
+
+[─] Testing: n=8, lb=189, tw=0.3
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 5.42% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -1.69% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret -1.00% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 17.61% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -4.30% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 1.92% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -1.18% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 1.04% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -11.41% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret 1.71% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -4.72% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -5.54% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -0.73% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 9.26% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 6.31% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 5.08% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 32.92% ann'd
+
+[─] Testing: n=8, lb=189, tw=0.5
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 3.96% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -1.61% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 0.46% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 15.63% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -1.86% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 5.98% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -0.17% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret -2.37% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -7.63% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret 0.69% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -5.65% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -6.69% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -2.18% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 6.00% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 5.25% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 4.23% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 30.21% ann'd
+
+[─] Testing: n=8, lb=252, tw=0.0
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 7.68% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -2.34% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 5.83% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 9.16% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -12.49% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 14.65% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -12.10% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 1.36% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -9.92% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -5.94% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -4.63% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -7.46% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -3.45% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 6.50% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 6.07% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 3.66% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 53.29% ann'd
+
+[─] Testing: n=8, lb=252, tw=0.3
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 10.11% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -4.08% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 3.49% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 8.95% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -12.11% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 9.18% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -6.96% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 3.28% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -4.67% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -4.73% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -7.16% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -6.90% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -3.04% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 8.54% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 13.79% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 7.87% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 53.52% ann'd
+
+[─] Testing: n=8, lb=252, tw=0.5
+[harness] Fold 1/17: train 2005-01-03-2010-01-04 | test 2010-02-04-2011-02-02 | net ret 8.47% ann'd
+[harness] Fold 2/17: train 2005-01-03-2011-01-03 | test 2011-02-03-2012-02-02 | net ret -3.41% ann'd
+[harness] Fold 3/17: train 2005-01-03-2012-01-03 | test 2012-02-03-2013-02-05 | net ret 4.19% ann'd
+[harness] Fold 4/17: train 2005-01-03-2013-01-04 | test 2013-02-06-2014-02-05 | net ret 10.88% ann'd
+[harness] Fold 5/17: train 2005-01-03-2014-01-06 | test 2014-02-06-2015-02-05 | net ret -8.59% ann'd
+[harness] Fold 6/17: train 2005-01-03-2015-01-06 | test 2015-02-06-2016-02-05 | net ret 6.13% ann'd
+[harness] Fold 7/17: train 2005-01-03-2016-01-06 | test 2016-02-08-2017-02-06 | net ret -5.36% ann'd
+[harness] Fold 8/17: train 2005-01-03-2017-01-05 | test 2017-02-07-2018-02-06 | net ret 0.66% ann'd
+[harness] Fold 9/17: train 2005-01-03-2018-01-05 | test 2018-02-07-2019-02-07 | net ret -2.43% ann'd
+[harness] Fold 10/17: train 2005-01-03-2019-01-08 | test 2019-02-08-2020-02-07 | net ret -5.95% ann'd
+[harness] Fold 11/17: train 2005-01-03-2020-01-08 | test 2020-02-10-2021-02-08 | net ret -10.21% ann'd
+[harness] Fold 12/17: train 2005-01-03-2021-01-07 | test 2021-02-09-2022-02-07 | net ret -3.43% ann'd
+[harness] Fold 13/17: train 2005-01-03-2022-01-06 | test 2022-02-08-2023-02-08 | net ret -2.58% ann'd
+[harness] Fold 14/17: train 2005-01-03-2023-01-09 | test 2023-02-09-2024-02-09 | net ret 7.05% ann'd
+[harness] Fold 15/17: train 2005-01-03-2024-01-10 | test 2024-02-12-2025-02-12 | net ret 14.27% ann'd
+[harness] Fold 16/17: train 2005-01-03-2025-01-13 | test 2025-02-13-2026-02-13 | net ret 4.48% ann'd
+[harness] Fold 17/17: train 2005-01-03-2026-01-14 | test 2026-02-17-2026-06-16 | net ret 45.06% ann'd
+
+============================================================
+BEST: n=5, lb=189, tw=0.3
+============================================================
+
+--- Baseline (pure momentum, tw=0.0) ---
+
+---
+SCORE                0.0
+sharpe_net           -0.2681
+sharpe_gross         -0.1039
+deflated_sharpe      -20.2299
+sortino              -0.3695
+max_dd_pct           -57.6
+ann_turnover         16.0
+n_trades             1690
+win_rate             0.4564
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           -0.2824
+sharpe_gross         -0.1172
+deflated_sharpe      -21.1482
+sortino              -0.3927
+max_dd_pct           -54.4
+ann_turnover         15.4
+n_trades             1613
+win_rate             0.4583
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           -0.319
+sharpe_gross         -0.1596
+deflated_sharpe      -23.4857
+sortino              -0.4431
+max_dd_pct           -59.4
+ann_turnover         15.2
+n_trades             1610
+win_rate             0.4542
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.1634
+sharpe_net           0.1634
+sharpe_gross         0.3105
+deflated_sharpe      7.3723
+sortino              0.2261
+max_dd_pct           -24.9
+ann_turnover         12.2
+n_trades             1671
+win_rate             0.4764
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.217
+sharpe_net           0.217
+sharpe_gross         0.3737
+deflated_sharpe      10.803
+sortino              0.3019
+max_dd_pct           -22.6
+ann_turnover         12.8
+n_trades             1694
+win_rate             0.4789
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.1554
+sharpe_net           0.1554
+sharpe_gross         0.2986
+deflated_sharpe      6.8597
+sortino              0.2157
+max_dd_pct           -27.7
+ann_turnover         12.4
+n_trades             1679
+win_rate             0.4759
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           0.037
+sharpe_gross         0.1674
+deflated_sharpe      -0.7092
+sortino              0.0507
+max_dd_pct           -39.2
+ann_turnover         11.0
+n_trades             1649
+win_rate             0.4774
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.1805
+sharpe_net           0.1805
+sharpe_gross         0.3121
+deflated_sharpe      8.4664
+sortino              0.2474
+max_dd_pct           -28.3
+ann_turnover         10.5
+n_trades             1678
+win_rate             0.4715
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.1336
+sharpe_net           0.1336
+sharpe_gross         0.2684
+deflated_sharpe      5.4703
+sortino              0.1866
+max_dd_pct           -30.7
+ann_turnover         10.9
+n_trades             1646
+win_rate             0.474
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           -0.2672
+sharpe_gross         -0.075
+deflated_sharpe      -20.1766
+sortino              -0.3636
+max_dd_pct           -56.7
+ann_turnover         19.2
+n_trades             2442
+win_rate             0.4669
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           -0.3114
+sharpe_gross         -0.1194
+deflated_sharpe      -23.0037
+sortino              -0.4278
+max_dd_pct           -63.5
+ann_turnover         19.0
+n_trades             2477
+win_rate             0.4627
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           -0.2116
+sharpe_gross         -0.0201
+deflated_sharpe      -16.6145
+sortino              -0.2965
+max_dd_pct           -53.5
+ann_turnover         18.9
+n_trades             2461
+win_rate             0.4603
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.1533
+sharpe_net           0.1533
+sharpe_gross         0.3373
+deflated_sharpe      6.7275
+sortino              0.2083
+max_dd_pct           -30.9
+ann_turnover         15.5
+n_trades             2444
+win_rate             0.4867
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.1429
+sharpe_net           0.1429
+sharpe_gross         0.3237
+deflated_sharpe      6.0648
+sortino              0.1952
+max_dd_pct           -29.6
+ann_turnover         15.4
+n_trades             2417
+win_rate             0.4808
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.12
+sharpe_net           0.12
+sharpe_gross         0.2966
+deflated_sharpe      4.5961
+sortino              0.166
+max_dd_pct           -29.7
+ann_turnover         15.4
+n_trades             2433
+win_rate             0.4808
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           0.0541
+sharpe_gross         0.2103
+deflated_sharpe      0.3797
+sortino              0.0734
+max_dd_pct           -39.8
+ann_turnover         13.8
+n_trades             2450
+win_rate             0.4828
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           0.1558
+sharpe_gross         0.3228
+deflated_sharpe      6.8856
+sortino              0.2169
+max_dd_pct           -35.7
+ann_turnover         13.8
+n_trades             2481
+win_rate             0.4806
+beta_spy             0.0
+oos_years            16.3
+
+---
+SCORE                0.0
+sharpe_net           0.1301
+sharpe_gross         0.2976
+deflated_sharpe      5.2466
+sortino              0.1785
+max_dd_pct           -35.0
+ann_turnover         13.5
+n_trades             2466
+win_rate             0.4774
+beta_spy             0.0
+oos_years            16.3
+SCORE                0.217
+sharpe_net           0.217
+sharpe_gross         0.3737
+deflated_sharpe      10.803
+sortino              0.3019
+max_dd_pct           -22.6
+ann_turnover         12.8
+n_trades             1694
+win_rate             0.4789
+beta_spy             0.0
+oos_years            16.3
+SCORE                0.0
+sharpe_net           -0.2681
+sharpe_gross         -0.1039
+deflated_sharpe      -20.2299
+max_dd_pct           -57.6
+
+--- Parameter Sensitivity ---
+ n_pos    lb    tw    SCORE       SR       DD   Trades
+     5   126   0.0   0.0000  -0.2681    -57.6     1690
+     5   126   0.3   0.0000  -0.2824    -54.4     1613
+     5   126   0.5   0.0000  -0.3190    -59.4     1610
+     5   189   0.0   0.1634   0.1634    -24.9     1671
+     5   189   0.3   0.2170   0.2170    -22.6     1694
+     5   189   0.5   0.1554   0.1554    -27.7     1679
+     5   252   0.0   0.0000   0.0370    -39.2     1649
+     5   252   0.3   0.1805   0.1805    -28.3     1678
+     5   252   0.5   0.1336   0.1336    -30.7     1646
+     8   126   0.0   0.0000  -0.2672    -56.7     2442
+     8   126   0.3   0.0000  -0.3114    -63.5     2477
+     8   126   0.5   0.0000  -0.2116    -53.5     2461
+     8   189   0.0   0.1533   0.1533    -30.9     2444
+     8   189   0.3   0.1429   0.1429    -29.6     2417
+     8   189   0.5   0.1200   0.1200    -29.7     2433
+     8   252   0.0   0.0000   0.0541    -39.8     2450
+     8   252   0.3   0.0000   0.1558    -35.7     2481
+     8   252   0.5   0.0000   0.1301    -35.0     2466
+
+LEDGER_ROW	s547	thematic-momentum	sp100	0.217	0.217	-22.6	12.8	3	keep	NEXTWAVE: thematic institutional rotation on S&P 100, n=8, lb=252d, theme_w=0.5, gap=10d. Captures predicted institutional rotation into AI infrastructure.
