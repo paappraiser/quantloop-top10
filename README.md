@@ -1,4 +1,4 @@
-# Quantloop — Top 10 Champion Strategies
+# Quantloop — Top  Champion Strategies
 
 Autonomous systematic strategy research — quantitative trading strategies generated, backtested, and curated by an LLM agent (Hermes Quant).
 
