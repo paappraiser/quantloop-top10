@@ -1,4 +1,4 @@
-# Quantloopp Top Stratagies
+# Quantloop — Top  Champion Strategies
 
 Autonomous systematic strategy research — quantitative trading strategies generated, backtested, and curated by an LLM agent (Hermes Quant). Top strategies from 550+ iterations across regime detection, trend following, mean reversion, dispersion arbitrage, earnings drift, and alt-asset momentum.
 
